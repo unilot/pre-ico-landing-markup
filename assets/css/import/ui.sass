@@ -1,0 +1,85 @@
+@import "color.sass" 
+.flex
+	display: flex
+body
+	width: 100%
+	height: 100%
+	overflow-x: hidden
+	background-size: cover
+	position: relative
+	font-family: "Roboto", arial !important
+p
+	padding: 0
+	margin: 0
+h1,h2,h3,h4
+	padding: 0
+	margin: 0
+ul, ol
+	list-style: none
+	padding: 0
+	margin: 0
+a
+	text-decoration: none
+	cursor: pointer
+.container
+	max-width: 1170px
+	padding: 0 20px
+	width: 100%
+	box-sizing: border-box
+	position: relative
+//:hover
+	// transition: all 0.3s
+
+.heading 
+	padding: 100px 0
+	position: relative
+	@media(max-width: 767px)
+		padding: 50px 0
+	h2
+		font-family: "GothamProBold"
+		color: $black
+		font-size: 55px
+		position: relative
+		z-index: 2
+		display: inline-block
+		@media(max-width: 560px)
+			font-size: 35px
+		&:before
+			content: ''
+			position: absolute
+			right: -120px
+			top: 30px
+			width: 100px
+			height: 3px
+			background-image: linear-gradient(to right, #f0bc9a, #f0dcbf)
+			@media(max-width: 560px)
+				display: none
+.btn
+	padding: 17px 30px
+	background-image: linear-gradient(to right, #4d2ce0, #8453f7)
+	display: inline-block
+	border-radius: 60px
+	color: $white
+	transition: all 0.3s
+	font-family: "GothamProRegular"
+	&:hover
+		background: $white
+		color: $lilac
+
+.scene, .scene1, .scene2
+	z-index: 10
+	position: absolute !important
+	top: 0
+	left: -15%
+	@media(max-width: 1024px)
+		display: none
+.scene1
+	top: -35px
+.scene2
+	top: 250px
+	left: 10px
+
+
+
+
+

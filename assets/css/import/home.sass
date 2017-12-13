@@ -1,0 +1,636 @@
+@import "color.sass" 
+
+.sentence
+	padding-top: 20px
+	background: $light-gray
+	position: relative
+	padding-top: 90px
+	&__social
+		position: fixed
+		z-index: 10
+		left: 30px
+		bottom: 30px
+		opacity: 0.5
+		transition: all 0.3s
+		@media(max-width: 1350px)
+			display: none
+		&:hover
+			opacity: 1
+		p
+			font-family: "GothamProRegular"
+			font-size: 15px !important
+			transform: rotate(270deg)
+			position: relative
+			left: -17px
+			bottom: 45px
+		&__block
+			background: #d9dbe0
+			flex-direction: column
+			display: flex
+			width: 50px
+			border-radius: 30px
+			a
+				color: $white
+				&:hover
+					color: $lilac
+			i
+				padding: 10px
+				font-size: 28px
+				display: inline-block
+				margin-bottom: 5px
+			.icon-github
+				&:hover
+					color: $black
+			.icon-telegram
+				&:hover
+					color: #2da5e1
+			.icon-medium
+				&:hover
+					color: $black
+			.icon-reddit
+				&:hover
+					color: #ff4500
+			.icon-twitter
+				&:hover
+					color: #50abf1
+	h1
+		font-family: "GothamProBold"
+		color: $black
+		font-size: 55px
+		padding-right: 70px
+		position: relative
+		padding-top: 44px
+		padding-bottom: 45px
+		@media(max-width: 670px)
+			font-size: 35px
+		&:before
+			content: ''
+			position: absolute
+			right: 60px
+			top: 80px
+			width: 100px
+			height: 3px
+			background-image: linear-gradient(to right, #f0bc9a, #f0dcbf)
+			@media(max-width: 1130px)
+				right: 20px
+			@media(max-width: 1070px)
+				right: -5px
+			@media(max-width: 1024px)
+				display: none
+	p
+		font-size: 18px
+		font-weight: 300
+	&__timer
+		p
+			font-size: 15px
+			color: $black
+			font-weight: 400
+			padding-top: 10px
+		b
+			color: #999999
+			font-weight: 300
+			padding-left: 10px
+			padding-right: 30px
+			@media(max-width: 360px)
+				padding-left: 0px
+				padding-right: 23px
+			&:nth-child(2)
+				padding-left: 17px
+
+		span
+			font-family: "Roboto"
+			color: $black
+			font-size: 48px
+			font-weight: 300
+			line-height: 70px
+			@media(max-width: 360px)
+				font-size: 40px
+	&__scale
+		border-radius: 20px
+		background: #d9dbe0
+		position: relative
+		padding: 10px 20px
+		margin-top: 15px
+		box-shadow: inset 0 1px 1px 0px #c9cbcf
+		p
+			font-weight: 400
+			font-size: 15px
+			color: $white
+			display: inline-block
+			padding: 0
+			position: relative
+			z-index: 3
+			@media(max-width: 400px)
+				font-size: 13px
+		span
+			position: absolute
+			z-index: 3
+			top: 10px
+			left: 46%
+			font-size: 20px
+			line-height: 22px
+			font-weight: 400
+			display: inline-block
+			color: $white
+		&_block
+			border-radius: 30px
+			position: absolute
+			height: 47px
+			background: #d83279
+			width: 53%
+			z-index: 1
+			left: 0
+			top: -4px
+			background-image: linear-gradient(to right, #d83279, #ff5b4e)
+			@media(max-width: 700px)
+				width: 55%
+			@media(max-width: 500px)
+				width: 58%
+			@media(max-width: 400px)
+				width: 60%
+	&__block
+		padding: 20px 0
+		border: 1px solid $white
+		background: #f0f0f2
+		border-radius: 15px
+		margin-top: 25px
+		p
+			font-size: 14px
+			text-transform: uppercase
+			padding-bottom: 10px
+		span
+			font-size: 30px
+			font-family: "GothamProBold"
+		&--padding
+			margin-right: 20px
+			@media(max-width: 767px)
+				margin-right: 0
+	.btn
+		font-size: 25px
+		padding: 20px 50px
+		margin-top: 30px
+		margin-bottom: 50px
+		position: relative
+		z-index: 10
+		@media(max-width: 400px)
+			padding: 15px 30px
+	img
+		position: relative
+		left: 65px 
+		width: 100%
+		z-index: 11
+		@media(max-width: 1000px)
+			top: 24%
+		@media(max-width: 767px)
+			display: none
+.about
+	position: relative
+	@media(max-width: 1100px)
+		padding-bottom: 70px
+	span
+		font-size: 170px
+		font-family: "GothamProBold"
+		position: absolute
+		top: 35px
+		right: 0
+		z-index: 1
+		opacity: 0.1
+		color: $gray
+		@media(max-width: 767px)
+			display: none
+	p
+		font-size: 20px
+		font-weight: 300
+		color: #333333
+		line-height: 35px
+		b
+			font-weight: 400
+			color: $black
+		&:first-child
+			padding-bottom: 50px
+	img
+		position: relative
+		top: -130px
+		width: 100%
+		@media(max-width: 1024px)
+			top: 0
+		@media(max-width: 767px)
+			display: none
+.advantages
+	position: relative
+	background: #f8f8f8
+	padding-bottom: 70px
+	z-index: 11
+	span
+		font-size: 160px
+		font-family: "GothamProBold"
+		position: absolute
+		top: 52px
+		right: 0
+		z-index: 1
+		background: linear-gradient(to right, #ffffff, #ffffff, #e6e7e8, #e6e6e8)
+		-webkit-background-clip: text
+		color: transparent
+		@media(max-width: 767px)
+			display: none
+	&__block
+		border-radius: 20px
+		border: 2px solid #e7e7e7
+		padding: 40px
+		margin-bottom: 20px
+		@media(max-width: 450px)
+			padding: 15px
+		p
+			font-size: 18px
+			padding-left: 30px
+			display: inline-block
+		img
+			width: 90px
+			height: 90px
+			@media(max-width: 400px)
+				width: 70px
+				height: 70px
+		&--margin
+			margin-right: 15px
+			@media(max-width: 767px)
+				margin-right: 0
+.client
+	position: relative
+	background: #111111
+	.heading
+		padding-bottom: 55px
+		h2
+			color: $white
+		span
+			font-size: 160px
+			font-family: "GothamProBold"
+			position: absolute
+			top: 35px
+			right: 0
+			z-index: 1
+			background: linear-gradient(to right, #0a0a0a, #0f0e0e, #1a1a1a)
+			-webkit-background-clip: text
+			color: transparent
+			@media(max-width: 1024px)
+				display: none
+	p
+		font-size: 20px
+		font-weight: 300
+		padding-right: 30px
+		line-height: 30px
+		color: $gray
+		@media(max-width: 767px)
+			padding-right: 0
+	&__img
+		position: relative
+		z-index: 11
+		@media(max-width: 767px)
+			display: none
+		img
+			width: 100%
+	&__app
+		position: relative
+		padding-top: 90px 
+		a
+			background: $black
+			border-radius: 30px
+			display: inline-block
+			position: relative
+			padding: 10px 20px
+			margin-bottom: 20px
+			max-width: 200px
+			&:hover
+				box-shadow: 0 5px 20px 5px #222222
+			span
+				font-size: 18px 
+				color: $white
+				display: inline-block
+			p
+				font-size: 13px
+				line-height: 18px
+				color: $white
+				padding-right: 0
+				display: inline
+			img
+				width: 30px
+				height: auto
+				padding-top: 4px
+	&__lng
+		padding-top: 30px
+		margin-bottom: 30px
+		a
+			display: inline-block
+			margin-right: 20px
+			border-radius: 180px
+		img
+			width: 25px
+.roadmap
+	position: relative
+	background: $white
+	padding-bottom: 180px
+	@media(max-width: 1180px)
+		padding-bottom: 50px
+	.heading
+		padding-bottom: 60px
+		span
+			font-size: 160px
+			font-family: "GothamProBold"
+			position: absolute
+			top: 52px
+			right: 0
+			z-index: 1
+			opacity: 0.1
+			color: $gray
+			@media(max-width: 800px)
+				display: none
+.function
+	position: relative
+	background: #f8f8f8
+	padding-bottom: 90px
+	.heading
+		padding-bottom: 60px
+		h2
+			@media(max-width: 1120px)
+				font-size: 50px
+			@media(max-width: 767px)
+				font-size: 35px
+		span
+			font-size: 160px
+			font-family: "GothamProBold"
+			position: absolute
+			top: 52px
+			right: 0
+			z-index: 1
+			color: #ffffff
+			@media(max-width: 767px)
+				display: none
+	.h2
+		span
+			background: linear-gradient(to right, #ffffff, #e6e6e8)
+			-webkit-background-clip: text
+			color: transparent
+	img
+		@media(max-width: 1024px)
+			width: 70%
+		@media(max-width: 767px)
+			width: 100%
+	p
+		position: relative
+		padding-left: 25px
+		line-height: 30px
+		color: #03034b
+		font-size: 15px
+		span
+			position: absolute
+			left: 0
+			top: 7px
+			width: 15px
+			height: 15px
+			border-radius: 60px
+			background: #000
+		.purple
+			background: #3f4ab7
+		.green
+			background: #54ca95
+		.blue
+			background: #79d9ea
+		.lilac
+			background: #9771d0
+		.yellow
+			background: #ffd6c0
+.whitepaper
+	position: relative
+	background: $white
+	padding-bottom: 400px
+	@media(max-width: 1024px)
+		padding-bottom: 50px
+	.heading
+		padding-bottom: 60px
+		span
+			font-size: 160px
+			font-family: "GothamProBold"
+			position: absolute
+			top: 52px
+			right: 0
+			z-index: 1
+			color: #f7f7f8
+			@media(max-width: 1024px)
+				display: none
+	p
+		font-weight: 300
+		font-size: 18px
+		line-height: 30px
+		padding-bottom: 80px
+	span
+		color: #bab9b9
+		font-weight: 300
+		padding-left: 30px
+		@media(max-width: 767px)
+			display: inline-block
+			padding-top: 40px
+		@media(max-width: 730px)
+			padding-left: 0
+			line-height: 20px
+	.btn
+		box-shadow: 0 10px 30px 3px #f0edfd
+		position: relative
+		padding-left: 75px
+		padding: 13px 45px
+		.icon-file-text2
+			position: absolute
+			left: 25px
+			top: 10px
+			font-size: 25px
+.roadshow
+	position: relative
+	background: #131414
+	.heading
+		padding-bottom: 60px
+		h2
+			color: $white
+		span
+			font-size: 160px
+			font-family: "GothamProBold"
+			position: absolute
+			top: 52px
+			right: 0
+			z-index: 1
+			background: linear-gradient(to right, #1a1a1a, #1a1a1a, #0a0a0a)
+			-webkit-background-clip: text
+			color: transparent
+			@media(max-width: 900px)
+				display: none
+	.container
+		position: relative
+.advisors
+	position: relative
+	background: $white
+	.heading
+		padding-bottom: 60px
+		span
+			font-size: 160px
+			font-family: "GothamProBold"
+			position: absolute
+			top: 52px
+			right: 0
+			z-index: 1
+			color: #f7f7f8
+			@media(max-width: 1105px)
+				display: none
+	&__block
+		margin-bottom: 100px
+		a
+			font-size: 18px
+			line-height: 30px
+			color: $black
+			font-weight: 500
+			position: relative
+			display: inline-block
+			width: 100%
+		b
+			font-weight: 400
+			font-size: 12px
+			color: $gray
+		span
+			display: block
+			height: 2px
+			width: 30px
+			background: #f0be9c
+			margin: 20px 0
+		.icon-linkedin
+			position: absolute
+			bottom: 7px
+			padding-left: 10px
+			color: $gray
+		p
+			color: #333333
+			font-size: 12px
+			font-weight: 400
+			width: 200px
+			line-height: 20px
+			@media(max-width: 767px)
+				width: 100%
+		img
+			width: 100%
+			@media(max-width: 767px)
+				width: 80%
+			@media(max-width: 450px)
+				width: 100%
+.team
+	position: relative
+	background: #f8f8f8
+	.heading
+		padding-bottom: 60px
+		span
+			font-size: 160px
+			font-family: "GothamProBold"
+			position: absolute
+			top: 52px
+			right: 0
+			z-index: 1
+			background: linear-gradient(to right, #ffffff, #ffffff, #ffffff, #f9f9fa, #e6e7e8)
+			-webkit-background-clip: text
+			color: transparent
+			@media(max-width: 1024px)
+				display: none
+	a
+		margin-bottom: 30px
+		display: inline-block
+		width: 80%
+		p
+			font-size: 18px
+			line-height: 30px
+			color: $black
+			font-weight: 500
+			position: relative
+		b
+			font-weight: 400
+			font-size: 12px
+			color: $gray
+		span
+			display: block
+			height: 2px
+			width: 30px
+			background: #f0be9c
+			margin: 20px auto
+		.icon-linkedin
+			position: absolute
+			bottom: 7px
+			padding-left: 10px
+			color: $gray
+		img
+			max-width: 150px
+			@media(max-width: 767px)
+				max-width: 50%
+				width: 100%
+			@media(max-width: 420px)
+				max-width: 150px
+.faq
+	position: relative
+	background: $white
+	padding-bottom: 70px
+	span
+		font-size: 160px
+		font-family: "GothamProBold"
+		position: absolute
+		top: 52px
+		right: 0
+		z-index: 1
+		color: #f7f7f8
+		@media(max-width: 767px)
+			display: none
+	&__block	
+		border-bottom: 1px solid #dddddd
+		a
+			width: 100%
+			display: inline-block
+			padding: 15px 0
+			position: relative
+			color: $black
+			padding-right: 70px
+			box-sizing: border-box
+			.icon-chevron-thin-down
+				position: absolute
+				right: 20px
+				top: 38%
+				transition: all 0.3s
+				color: $lilac
+		p
+			padding: 15px 0
+			font-size: 16px
+			font-weight: 300
+			color: $gray
+			line-height: 30px
+		&--one
+			border-top: 1px solid #dddddd
+	.btn
+		padding: 17px 50px
+		background: $black
+		color: $white
+		border: 2px solid $black
+		margin-top: 35px
+		font-size: 15px
+		&:hover
+			background: none
+			color: $black
+.faq__block.active
+	.icon-chevron-thin-down
+		transform: rotate(180deg)
+		color: $gray
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

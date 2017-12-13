@@ -1,0 +1,371 @@
+@import "color.sass" 
+.slideout-menu
+	position: fixed
+	z-index: 8
+	top: 0
+	bottom: 0
+	display: none 
+	overflow-y: scroll
+	max-width: 350px
+	min-height: 100vh
+	-webkit-overflow-scrolling: touch
+	background: #181a22
+	// хром, сафари
+	&::-webkit-scrollbar
+		width: 0
+	-ms-overflow-style: none
+	overflow: -moz-scrollbars-none
+.slideout-menu-right
+	right: 0
+	overflow-x: hidden
+	ul
+		list-style: none
+		padding-left: 10px
+	li
+		padding-top: 35px
+		padding-left: 25px
+		&:last-child
+			border-top: 2px solid #333333
+			border-bottom: 2px solid #333333
+			width: 100%
+			position: relative
+			padding: 0
+			left: -5px
+			margin-top: 10px
+			&:hover
+				color: #502ee1
+				p
+					color: #502ee1
+			select
+				width: 100%
+				height: 56px
+				position: reative
+				border: none
+				cursor: pointer
+				opacity: 0
+				filter: alpha(opacity = 0)
+			p
+				position: absolute
+				left: 30px
+				top: 20px
+				font-size: 18px
+				color: #cdcdcd
+				font-family: "GothamProRegular"
+				overflow: hidden
+			.icon-arrow_drop_down
+				font-size: 25px
+				position: absolute
+				top: 16px
+				right: 10px
+				color: #cdcdcd
+	a
+		color: #cdcdcd
+		font-size: 25px
+		font-weight: 100
+		transition: all 0.3s
+		&:hover
+			color: #502ee1
+		.icon-arrow_drop_down
+			position: relative
+			top: 4px
+	.lng
+		border-top: 2px solid #2c2e3c
+		border-bottom: 1px solid #2c2e3c
+		background: #1e202b
+		a
+			font-size: 20px
+			color: #cdcdcd
+			position: relative
+			padding: 20px 80px
+			border-bottom: 1px solid #2c2e3c
+			display: inline-block
+			width: 100%
+			box-sizing: border-box
+			img
+				position: absolute
+				left: 50px
+				top: 25px
+			i
+				position: absolute
+				right: 55px
+				transition: all 0.3s ease-in-out
+		&__block
+			a
+				border: none
+		&.active
+			.icon-caret-down
+				transform: rotate(180deg)
+				color: #999999
+	.unilot
+		background: #181a22
+		width: 100%
+		padding-top: 25px
+		padding-bottom: 60px
+		padding-left: 50px
+		p
+			font-size: 14px
+			color: #818494
+			padding: 20px 0
+		a
+			padding: 10px 0px 10px 45px
+			background: $black
+			display: inline-block
+			margin-bottom: 10px
+			width: 75%
+			font-size: 18px
+			position: relative
+			border-radius: 5px
+			color: $white
+			&:last-child
+				margin-bottom: 40px
+			img
+				position: absolute
+				left: 5px
+				top: 4px
+				width: 28px
+				padding-left: 0
+		img
+			width: 60%
+			padding-left: 20px
+	.social
+		position: fixed
+		bottom: 0
+		padding-top: 25px
+		padding-bottom: 25px
+		width: 450px
+		border-top: 2px solid #2c2e3c
+		background: #181a22
+		i
+			padding-left: 45px
+			color: $white
+			&:hover
+				color: $red
+.slideout-menu-left
+	left: 0
+.slideout-panel
+	position: relative
+	z-index: 9
+	min-height: 100vh 
+	background-color: #fff
+	will-change: transform
+.slideout-open
+	overflow: hidden
+.slideout-open body,
+.slideout-open .slideout-panel
+	overflow: hidden
+.slideout-open .slideout-menu
+	display: block
+.panel:before 
+	content: ''
+	display: block
+	background-color: rgba(0,0,0,0)
+	transition: background-color 0.5s ease-in-out
+.panel-open:before 
+	content: ''
+	position: absolute
+	top: 0
+	bottom: 0
+	width: 100%
+	background-color: rgba(0,0,0,.5)
+	z-index: 999
+#btn
+	display: block
+	width: 36px
+	height: 20px
+	padding-top: 20px
+	cursor: pointer
+	span
+		&:after, &:before
+			content: ""
+			position: absolute
+			left: 0
+			top: -10px
+		&:after
+			top: 10px
+			width: 36px
+			height: 5px
+			background-color: #6c52e3
+			transition: all 0.3s
+			border-radius: 7px
+			backface-visibility: hidden
+		position: relative
+		display: block
+		width: 36px
+		height: 5px
+		background-color: #8161eb
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 7px
+		&:before
+			width: 36px
+			border-radius: 7px
+			height: 5px
+			background-color: #ac8ff3
+			transition: all 0.3s
+			backface-visibility: hidden
+body.on
+	#btn, .sentence__social
+		display: none
+
+.menu-close
+	position: sticky
+	top: 20px
+	left: 85%
+	width: 40px
+	height: 40px
+	cursor: pointer
+	span
+		background-color: transparent
+		position: relative
+		top: 20px
+		&:after, &:before
+			content: ""
+			position: absolute
+			left: 0
+			top: -10px
+		&:after
+			content: ''
+			top: 10px
+			width: 36px
+			height: 5px
+			background-color: $gray
+			transition: all 0.3s
+			backface-visibility: hidden
+			border-radius: 2px
+			transform: rotate(-45deg) translate(9px, -8px)
+		&:before
+			content: ''
+			transform: rotate(45deg) translate(6px, 5px)
+			width: 36px
+			height: 5px
+			background-color: $gray
+			transition: all 0.3s
+			backface-visibility: hidden
+			border-radius: 2px
+.top-line-anchor
+	display: inline-block
+	position: fixed
+	top: 12px
+	left: 20px
+	z-index: 10
+@media(max-width: 1024px)
+	.header
+		ul
+			display: none
+		&__left__lng
+			display: none
+@media(max-width: 767px)
+	.top-line-anchor
+		position: absolute
+		left: 13px
+		top: 15px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body.on
+	.header
+		z-index: 8
+	.sentence
+		padding-top: 20px
+.header
+	position: fixed
+	width: 100%
+	z-index: 10
+	padding: 5px 0
+	font-family: "GothamProRegular"
+	background: $light-gray
+	@media(max-width: 1024px)
+		padding: 15px 0
+	@media(max-width: 767px)
+		padding-top: 3px
+	li
+		a
+			font-size: 15px
+			color: $black
+	&__logo
+		a
+			display: block
+		img
+			width: 150px
+			box-sizing: border-box
+			@media(max-width: 767px)
+				padding-top: 10px
+			@media(max-width: 520px)
+				width: 100%
+				padding-left: 40px
+
+	&__left
+		position: relative
+
+		a
+			font-size: 18px
+			display: inline-block
+		&__lng
+			border: 2px solid $white
+			width: 100%
+			border-radius: 60px
+			position: relative
+			transition: all 0.3s
+			&:hover
+				background: $lilac
+				border: 2px solid $lilac
+				p
+					color: $gray
+				.icon-arrow_drop_down
+					color: $gray
+			select
+				width: 100%
+				height: 49px
+				position: reative
+				border: none
+				cursor: pointer
+				opacity: 0
+				filter: alpha(opacity = 0)
+			p
+				position: absolute
+				left: 30px
+				top: 16px
+				font-size: 18px
+				color: $black
+				font-family: "GothamProRegular"
+				overflow: hidden
+			.icon-arrow_drop_down
+				font-size: 25px
+				position: absolute
+				top: 13px
+				right: 10px
+		&__btn
+			a
+				width: 150px
+			@media(max-width: 1024px)
+				position: absolute
+				bottom: -5px
+				right: 0
+			@media(max-width: 767px)
+				position: relative
+				a
+					display: none
+			.none
+				display: none
+				@media(max-width: 767px)
+					display: inline-block
+				@media(max-width: 500px)
+					padding: 18px 0
+					width: 100%
+
+
+

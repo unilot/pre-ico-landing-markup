@@ -1,0 +1,187 @@
+@import "color.sass"
+.footer
+	position: relative
+	background: $black
+	.heading
+		padding-bottom: 60px
+		h2
+			color: $white
+		span
+			font-size: 160px
+			font-family: "GothamProBold"
+			position: absolute
+			top: 52px
+			right: 0
+			z-index: 1
+			background: linear-gradient(to right, #000000, #141414, #1a1a1a)
+			-webkit-background-clip: text
+			color: transparent
+			@media(max-width: 767px)
+				display: none
+	.form
+		input
+			width: 95%
+			border: none
+			border-bottom: 2px solid #999999
+			outline: none
+			background: none
+			color: #999999
+			transition: all 0.3s
+			padding: 10px 0
+			margin-bottom: 25px
+			@media(max-width: 767px)
+				width: 100%
+			&:focus
+				border-bottom: 2px solid #623be9
+		textarea
+			width: 100%
+			border: none
+			border-bottom: 2px solid #999999
+			outline: none
+			background: none
+			color: #999999
+			transition: all 0.3s
+			padding: 10px 0
+			margin-bottom: 25px
+			height: 18px
+			&:focus
+				border-bottom: 2px solid #623be9
+		p
+			font-size: 12px
+			font-weight: 400
+			color: #666666
+			text-transform: uppercase
+	.btn
+		width: 100%
+		padding: 10px 0
+		@media(max-width: 767px)
+			margin-top: 20px
+	&__top
+		padding-top: 80px
+		a
+			background: #111111
+			border-radius: 10px
+			padding: 20px 0
+			display: block
+			color: $white
+			margin-bottom: 40px
+			&:hover
+				box-shadow: 0 10px 30px 3px #222222
+			p
+				display: inline-block
+				padding-left: 15px
+				position: relative
+				top: 5px
+			.git
+				top: -20px
+			.icon-github
+				font-size: 65px
+			.icon-telegram
+				width: 65px
+				height: 65px
+				background: #298fc2
+				display: inline-block
+				border-radius: 180px
+				font-size: 35px
+				&:before
+					position: relative
+					top: 15px
+					left: -3px
+			.icon-medium
+				width: 65px
+				height: 65px
+				border: 1px solid #212121
+				display: inline-block
+				border-radius: 180px
+				font-size: 35px
+				&:before
+					position: relative
+					top: 13px
+	&__bottom
+		padding-bottom: 140px
+		@media(max-width: 767px)
+			padding-bottom: 60px
+		a
+			border: 1px solid #222222
+			border-radius: 15px
+			padding: 10px 0
+			display: block
+			color: $white
+			margin-bottom: 40px
+			&:hover
+				box-shadow: 0 10px 30px 3px #222222
+			p
+				display: inline-block
+				padding-left: 15px
+				position: relative
+				top: 8px
+			.icon-reddit
+				width: 50px
+				height: 50px
+				background: #ff4500
+				display: inline-block
+				border-radius: 180px
+				font-size: 25px
+				&:before
+					position: relative
+					top: 13px
+			.icon-twitter
+				width: 50px
+				height: 50px
+				background: #50abf1
+				display: inline-block
+				border-radius: 180px
+				font-size: 25px
+				&:before
+					position: relative
+					top: 13px
+			.icon-facebook
+				width: 50px
+				height: 50px
+				background: #3a559f
+				display: inline-block
+				border-radius: 180px
+				font-size: 25px
+				&:before
+					position: relative
+					top: 13px
+			.icon-linkedin2
+				width: 50px
+				height: 50px
+				background: #0084b1
+				display: inline-block
+				border-radius: 180px
+				font-size: 23px
+				&:before
+					position: relative
+					top: 12px
+			.medium
+				background: url("../img/Slack_Mark.png") no-repeat
+				width: 50px
+				height: 50px
+				display: inline-block
+			.slack
+				top: -20px
+			.icon-YouTube-2
+				width: 50px
+				height: 50px
+				background: #e62117
+				display: inline-block
+				border-radius: 180px
+				font-size: 25px
+				&:before
+					position: relative
+					top: 12px
+	&__logo
+		img
+			height: 27px
+		p
+			font-size: 13px
+			font-weight: 400
+			padding-top: 15px
+			padding-bottom: 40px
+			color: $gray
+
+
+
+

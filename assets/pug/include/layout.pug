@@ -1,0 +1,171 @@
+doctype
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(content='width=device-width, initial-scale=1.0, user-scalable=no', name='viewport')
+		title Unilot
+		link(href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500&amp;subset=latin-ext" rel="stylesheet")
+		link(rel="stylesheet", href="css/main.css")
+	body
+		header.header
+			.container
+				.row.middle-xs
+					.col-md-2.col-sm-12.col-xs-6.start-md.center-xs
+						.header__logo
+							.top-line-anchor
+								#sticky.sticky-element
+									.sticky-anchor
+									.sticky-content
+										.menu-open
+											a#btn(href='#menu')
+												span
+							a(href="#")
+								img(src="img/logo-header.svg", alt="")
+					.col-md-6
+						ul.flex.around-xs#link
+							li
+								a(href="#link1") What is Unilot
+							li
+								a(href="#link2") White Paper
+							li
+								a(href="#link3") FAQ
+							li
+								a(href="#") Upcoming Events
+					.col-md-4.col-sm-12.col-xs-6
+						.header__left
+							.row
+								.col-md-4
+									.header__left__lng
+										include lng-menu
+								.col-md-8.col-xs-12.start-md.center-xs
+									.header__left__btn
+										a(href="#").btn Contribute Now
+										a(href="#").btn.none Contribute
+		.sentence__social
+			p Contact Us
+			.sentence__social__block
+				a(href="#")
+					i.icon-github
+				a(href="")
+					i.icon-telegram
+				a(href="")
+					i.icon-medium
+				a(href="")
+					i.icon-reddit
+				a(href="")
+					i.icon-twitter
+		#menu.slideout-menu.slideout-menu-right
+			.menu-close
+				span
+			.row
+				.col-xs-12#link-1
+					ul
+						li
+							a(href="#link1") What is Unilot
+						li
+							a(href="#link2") White Paper
+						li
+							a(href="#link3") FAQ
+						li
+							a(href="#") Upcoming Events
+						li
+							a(href="#") Contribute Now
+						li
+							include lng-menu
+					.unilot
+						.row
+							.col-xs-5
+								img(src="img/logo.svg", alt="")
+								p Скачайте приложение Unilot App и будьте всегда в курсе новых лотерей
+								a(href="#") App Store
+									img(src="img/apple.svg", alt="")
+								a(href="#") Google Play
+									img(src="img/google-play.svg", alt="")
+							.col-xs-7
+								img(src="img/sentence.png", alt="")
+					.social
+						i.icon-github
+						i.icon-telegram
+						i.icon-medium
+						i.icon-reddit
+						i.icon-twitter
+		#panel.slideout-panel.slideout-panel-right
+
+
+
+			block content
+			footer.footer
+				.container
+					.row
+						.col-xs-12
+							.heading
+								h2 Contact Us
+								span Contact
+							form.form
+								.row
+									.col-sm-4.col-xs-12
+										p NAME
+										input(type="text" name="name")
+									.col-sm-4.col-xs-12
+										p EMAIL
+										input(type="email" name="email")
+									.col-sm-4.col-xs-12
+										p COMMENT
+										textarea(name="comment")
+							.row.middle-xs
+								.col-md-4.col-sm-5.col-sm-offset-5.col-xs-12.col-md-offset-6.end-xs
+									.g-recaptcha(data-sitekey="6LcJyDwUAAAAAOHyF7J80mQFTYwXDLusskM8b-_d", data-size='invisible')
+								.col-sm-2.center-xs.col-xs-12
+									a(href="#").btn Join
+					.footer__top
+						.row.center-xs
+							.col-sm-4.col-xs-12
+								a(href="#")
+									i.icon-github
+									p.git GitHub
+							.col-sm-4.col-xs-12
+								a(href="#")
+									i.icon-telegram
+									p Telegram
+							.col-sm-4.col-xs-12
+								a(href="#")
+									i.icon-medium
+									p Medium
+					.footer__bottom
+						.row.start-sm.center-xs
+							.col-md-2.col-sm-4.col-xs-10.center-xs
+								a(href="#")
+									i.icon-reddit
+									p Reddit
+							.col-md-2.col-sm-4.col-xs-10.center-xs
+								a(href="#")
+									i.icon-twitter
+									p Twitter
+							.col-md-2.col-sm-4.col-xs-10.center-xs
+								a(href="#")
+									i.icon-facebook
+									p Facebook
+							.col-md-2.col-sm-4.col-xs-10.center-xs
+								a(href="#")
+									i.icon-linkedin2
+									p Linkedin
+							.col-md-2.col-sm-4.col-xs-10.center-xs
+								a(href="#")
+									i.medium
+									p.slack Slack
+							.col-md-2.col-sm-4.col-xs-10.center-xs
+								a(href="#")
+									i.icon-YouTube-2
+									p YouTube
+					.footer__logo
+						.row.center-xs
+							.col-xs-12
+								img(src="img/logo.svg", alt="")
+								p Unilot® 2017 All Rights Reserved
+
+
+
+
+		script(src='https://www.google.com/recaptcha/api.js')
+		script(src="js/main.js")
+		block script

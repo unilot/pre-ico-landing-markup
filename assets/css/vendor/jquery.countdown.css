@@ -1,0 +1,38 @@
+/* jQuery Countdown styles 2.0.0. */
+
+.countdown-show1 .countdown-section {
+	width: 98%;
+}
+.countdown-show2 .countdown-section {
+	width: 48%;
+}
+.countdown-show3 .countdown-section {
+	width: 32.5%;
+}
+.countdown-show4 .countdown-section {
+	width: 9%;
+}
+.countdown-show5 .countdown-section {
+	width: 19.5%;
+}
+.countdown-show6 .countdown-section {
+	width: 16.25%;
+}
+.countdown-show7 .countdown-section {
+	width: 10%;
+}
+.countdown-section {
+	display: block;
+	float: left;
+	text-align: center;
+}
+.countdown-amount {
+    font-size: 15px;
+}
+.countdown-period {
+    display: block;
+}
+.countdown-descr {
+	display: block;
+	width: 10%;
+}
