@@ -26,6 +26,7 @@
     "gulp-pug": "^3.3.0",
     "gulp-uglify": "^1.5.4",
     "jquery": "^1.9.1",
+    "jquery-countdown": "^2.2.0",
     "normalize.css": "^7.0.0",
     "parallax-js": "^3.1.0",
     "swiper": "^4.0.5"

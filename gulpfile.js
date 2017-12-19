@@ -17,7 +17,7 @@ var jsOrderedList = [
     assetsDir + '/js/vendor/slideout.js',
     assetsDir + '/js/vendor/jquery.rollingslider.js',
     assetsDir + '/js/vendor/jquery.plugin.min.js',
-    assetsDir + '/js/vendor/jquery.countdown.js',
+    nodeModulesDir + '/jquery-countdown/dist/jquery.countdown.js',
     nodeModulesDir + '/parallax-js/dist/parallax.min.js',
     nodeModulesDir + '/swiper/dist/js/swiper.min.js',
     assetsDir + '/js/main.js'
