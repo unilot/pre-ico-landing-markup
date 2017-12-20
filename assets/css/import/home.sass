@@ -619,18 +619,115 @@
 		color: $gray
 
 
+// TODO: issue #1
+.gray
+	position: relative
+	background: #f8f8f8
+	padding-bottom: 160px
+	.heading
+		span
+			font-size: 160px
+			font-family: "GothamProBold"
+			position: absolute
+			top: 52px
+			right: 0
+			z-index: 1
+			background: linear-gradient(to right, #ffffff, #ffffff, #ffffff, #f9f9fa, #e6e7e8)
+			-webkit-background-clip: text
+			color: transparent
+			@media(max-width: 1024px)
+				display: none
 
+#publications
+		.thumbnail
+			max-width: 270px
+			.caption
+				margin-top: 20px
+				padding: 15px 25px
+				border-left: solid 2px #f0f0f0
+				h3
+					font-size: 18px
+					line-height: 30px
+					color: $black
+					font-weight: 500
+					position: relative
+					text-transform: uppercase
+				h3:after
+					content: ' '
+					display: block
+					height: 2px
+					width: 30px
+					background: #f0be9c
+					margin: 10px 0
+				p
+					font-size: 13px
+					line-height: 1.5
+					margin-top: 20px
+					a.btn
+						background: transparent
+						border: solid 1px #e0e0e0
+						color: $black
+						align: center
+						padding: 10px 50px
 
+#publications
+	.flex-wrap
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+	.thumbnail
+		max-width: 270px
+		margin: 1.5em
 
+@media(min-width: 650px)
+	#publications
+		.flex-wrap
+			justify-content: center
+			.thumbnail
+				margin: 1em
 
+@media(min-width: 947px)
+	#publications
+		.flex-wrap
+			justify-content: space-between
+			.thumbnail
+				margin: 5px
 
+.white
+	position: relative
+	background: $white
+	padding-bottom: 70px
+	span
+		font-size: 160px
+		font-family: "GothamProBold"
+		position: absolute
+		top: 52px
+		right: 0
+		z-index: 1
+		color: #f7f7f8
+		@media(max-width: 767px)
+			display: none
 
+#partners
+	.flex-wrap
+		display: flex
+		flex-wrap: wrap
+		.thumbnail
+			margin: 0.5em
 
+@media(max-width: 1154px)
+	#partners
+		.flex-wrap
+			justify-content: center
 
-
-
-
-
-
-
-
+@media(max-width: 685px)
+	#partners
+		.flex-wrap
+			justify-content: center
+	
+@media(min-width: 1154px)
+	#partners
+		.flex-wrap
+			justify-content: space-between
+			.thumbnail
+				margin: 0.5em 0
