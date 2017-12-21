@@ -7,13 +7,14 @@ var gulp = require('gulp'),
         csscomb = require('gulp-csscomb'),
         imagemin = require('gulp-imagemin'),
         concat = require('gulp-concat'),
-        uglify = require('gulp-uglify');
+        uglify = require('gulp-uglify'),
+        hash = require('gulp-hash-filename');
 
 var nodeModulesDir = __dirname + '/node_modules';
 var assetsDir = __dirname + '/assets';
 var distDir = __dirname + '/docs';
 var jsOrderedList = [
-    nodeModulesDir + '/jquery/jquery.min.js',
+    nodeModulesDir + '/jquery/dist/jquery.min.js',
     assetsDir + '/js/vendor/slideout.js',
     assetsDir + '/js/vendor/jquery.rollingslider.js',
     assetsDir + '/js/vendor/jquery.plugin.min.js',
@@ -100,6 +101,7 @@ gulp.task('js:prod', function() {
     return gulp.src(jsOrderedList)
         .pipe(concat('main.min.js'))
         .pipe(uglify())
+        .pipe(hash())
         .pipe(gulp.dest(__dirname + '/docs/js/'))
 });
 
@@ -109,6 +111,7 @@ gulp.task('css:prod', ['sass'], function() {
     return gulp.src(cssOrderedList)
         .pipe(concat('main.min.css'))
         .pipe(cssnano())
+        .pipe(hash())
         .pipe(gulp.dest(__dirname + '/docs/css'))
 });
 
