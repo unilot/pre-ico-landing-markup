@@ -85,7 +85,7 @@ gulp.task('watch', function (){
 });
 
 gulp.task('sass:watch', function () {
-  gulp.watch('./assets/**/*.sass', ['sass']);
+  gulp.watch('./assets/**/*.sass', ['css']);
 });
 
 // Server
