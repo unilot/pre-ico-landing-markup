@@ -1,10 +1,8 @@
 @import "color.sass" 
 
 .sentence
-	padding-top: 20px
 	background: $light-gray
 	position: relative
-	padding-top: 90px
 	&__social
 		position: fixed
 		z-index: 10
@@ -218,7 +216,7 @@
 			display: none
 .advantages
 	position: relative
-	background: #f8f8f8
+	background: $gray-section
 	padding-bottom: 70px
 	z-index: 11
 	span
@@ -345,7 +343,7 @@
 				display: none
 .function
 	position: relative
-	background: #f8f8f8
+	background: $gray-section
 	padding-bottom: 90px
 	.heading
 		padding-bottom: 60px
@@ -518,7 +516,7 @@
 				width: 100%
 .team
 	position: relative
-	background: #f8f8f8
+	background: $gray-section
 	.heading
 		padding-bottom: 60px
 		span
@@ -622,7 +620,7 @@
 // TODO: issue #1
 .gray
 	position: relative
-	background: #f8f8f8
+	background: $gray-section
 	padding-bottom: 160px
 	.heading
 		span
@@ -731,3 +729,20 @@
 			justify-content: space-between
 			.thumbnail
 				margin: 0.5em 0
+
+section:first-of-type
+	padding-top: 90px
+
+.error
+	background: $light-gray
+	padding: 75px 0
+	font-family: 'GothamProBold'
+	h1
+		font-size: 55px
+		color: #8b8888
+		margin-bottom: 0.5em
+	p
+		font-size: 20px
+		margin-bottom: 1.5em
+	.error-code
+		color: #8b8888
