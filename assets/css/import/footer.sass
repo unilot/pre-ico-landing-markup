@@ -97,7 +97,7 @@
 				&:before
 					position: relative
 					top: 13px
-	&__bottom
+	&__social
 		padding-bottom: 140px
 		@media(max-width: 767px)
 			padding-bottom: 60px
@@ -172,27 +172,37 @@
 				&:before
 					position: relative
 					top: 12px
+	
+	&__bottom
+		.row
+			> div
+				margin: 2em 0
+	
 	&__logo
 		img
 			height: 27px
 		p
 			font-size: 13px
 			font-weight: 400
-			padding-top: 15px
-			padding-bottom: 40px
 			color: $gray
+			margin-top: 20px
 
 	.ethereum-logo
-		height: 4em
-	.menu
-		line-height: 1em
-		margin-top: 2em
-		a
-			color: $white
-			font-size: 0.80em
-			&:hover
-				text-decoration: underline
+		img
+			height: 4em
 
-
-
-
+	&__nav
+		ul
+			margin: 0
+			padding: 0
+			li
+				display: inline-block
+				margin-left: 20px
+				line-height: 1.5em
+				a
+					color: $white
+					font-size: 0.8em
+					top: -2px
+					padding: 0
+				a:hover
+					text-decoration: underline
