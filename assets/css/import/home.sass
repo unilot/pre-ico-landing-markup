@@ -653,7 +653,7 @@ span.big-amount
 			-webkit-background-clip: text
 			color: transparent
 
-.faq, .terms
+.faq, .document
 	.heading
 		padding: 2em 0 1em
 // end .heading styles --------------------------------
@@ -667,30 +667,28 @@ p
 	font-weight: 300
 	line-height: 30px
 
-.terms
+.document
 	padding-bottom: 3em
 	.todo
 		color: red
-	.row:nth-child(4), .row:nth-child(5)
+	.row
 		counter-reset: section
-		ol
+		h4.numbered::before
+			counter-increment: section
+			content: counter(section) '. '
+		ol.numbered
+			counter-reset: section
+		ol, ol.numbered
 			list-style-type: none
 			li::before
 				counter-increment: section
 				content: counter(section) '. '
 				font-weight: bolder
-	.row:nth-child(2)
-		counter-reset: section
-		h4::before
-			counter-increment: section
-			content: counter(section) '. '
-		ol
-			list-style-type: none	
+		ol.nested
 			counter-reset: subsection
 			li::before
 				counter-increment: subsection
 				content: counter(section) '.' counter(subsection) '. '
-				font-weight: bolder
 		ol.latin
 			counter-reset: latin
 			li::before
@@ -701,24 +699,22 @@ p
 			li::before
 				counter-increment: roman
 				content: counter(roman, lower-roman) '. '
-	h3
-		margin-top: 1.5em
-	h4
-		line-height: 2em
-		margin-top: 0.5em
-		font-size: 1.1em
-	ol
-		list-style-type: decimal
-		padding-left: 2em
-	ul
-		list-style-type: disc
-		padding-left: 2em
-	li
-		margin-top: 0
-		margin-bottom: 0.5em
-		font-size: 16px
-		font-weight: 300
-		line-height: 2em
+		h3
+			margin-top: 1.5em
+		h4
+			margin-top: 0.5em
+			line-height: 2em
+			font-size: 1.1em
+		ol, ul.bulleted
+			padding-left: 2em
+		ul.bulleted
+			list-style-type: disc
+		li
+			margin-top: 0
+			margin-bottom: 0.5em
+			font-size: 16px
+			font-weight: 300
+			line-height: 2em
 
 table
 	border-spacing: 0
