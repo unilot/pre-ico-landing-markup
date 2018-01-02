@@ -476,11 +476,7 @@
 	.question
 		margin-bottom: 1.5em
 	p
-		padding: 15px 0
-		font-size: 16px
-		font-weight: 300
 		color: $gray
-		line-height: 30px
 	h4
 		font-weight: normal
 	&__block	
@@ -656,10 +652,64 @@ span.big-amount
 			background: linear-gradient(to right, #1a1a1a, #1a1a1a, #0a0a0a)	// .roadshow
 			-webkit-background-clip: text
 			color: transparent
+
+.faq, .terms
+	.heading
+		padding: 2em 0 1em
 // end .heading styles --------------------------------
 
 .content
 	position: relative
+
+p
+	padding: 0.5em 0
+	font-size: 16px
+	font-weight: 300
+	line-height: 30px
+
+.terms
+	padding-bottom: 3em
+	.todo
+		color: red
+	.row:nth-child(2)
+		counter-reset: section
+		h4::before
+			counter-increment: section
+			content: counter(section) '. '
+		ol
+			list-style-type: none	
+			counter-reset: subsection
+			li::before
+				counter-increment: subsection
+				content: counter(section) '.' counter(subsection) '. '
+				font-weight: bold
+				// background: red
+		ol.latin
+			list-style-type: lower-latin
+			li::before
+				content: ''
+		ol.roman
+			list-style-type: lower-roman
+			li::before
+				content: ''
+	h3
+		margin-top: 1.5em
+	h4
+		line-height: 2em
+		margin-top: 0.5em
+		font-size: 1.1em
+	ol
+		list-style-type: decimal
+		padding-left: 2em
+	ul
+		list-style-type: disc
+		padding-left: 2em
+	li
+		margin-top: 0
+		margin-bottom: 0.5em
+		font-size: 16px
+		font-weight: 300
+		line-height: 2em
 
 table
 	border-spacing: 0
