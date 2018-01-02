@@ -766,3 +766,17 @@ span.big-amount
 	margin: 0
 	background: none
 	display: inline-block
+
+table
+	border-spacing: 0
+	border-collapse: collapse
+	&.table
+		width: 100%
+		max-width: 100%
+		& > tr > td, & > tbody > tr > td, & > thead > tr > td, & > thead > tr > th, & > tfoot > tr > td
+			padding: 8px
+			vertical-align: top
+
+	&.table-bordered
+		& > tr > td, & > tbody > tr > td, & > thead > tr > td, & > thead > tr > th, & > tfoot > tr > td
+			border: 1px solid #ddd
