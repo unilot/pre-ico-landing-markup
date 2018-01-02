@@ -671,6 +671,14 @@ p
 	padding-bottom: 3em
 	.todo
 		color: red
+	.row:nth-child(4), .row:nth-child(5)
+		counter-reset: section
+		ol
+			list-style-type: none
+			li::before
+				counter-increment: section
+				content: counter(section) '. '
+				font-weight: bolder
 	.row:nth-child(2)
 		counter-reset: section
 		h4::before
@@ -682,16 +690,17 @@ p
 			li::before
 				counter-increment: subsection
 				content: counter(section) '.' counter(subsection) '. '
-				font-weight: bold
-				// background: red
+				font-weight: bolder
 		ol.latin
-			list-style-type: lower-latin
+			counter-reset: latin
 			li::before
-				content: ''
+				counter-increment: latin
+				content: counter(latin, lower-alpha) '. '
 		ol.roman
-			list-style-type: lower-roman
+			counter-reset: roman
 			li::before
-				content: ''
+				counter-increment: roman
+				content: counter(roman, lower-roman) '. '
 	h3
 		margin-top: 1.5em
 	h4
