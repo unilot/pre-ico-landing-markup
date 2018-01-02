@@ -185,17 +185,6 @@
 	position: relative
 	@media(max-width: 1100px)
 		padding-bottom: 70px
-	span
-		font-size: 170px
-		font-family: "GothamProBold"
-		position: absolute
-		top: 35px
-		right: 0
-		z-index: 1
-		opacity: 0.1
-		color: $gray
-		@media(max-width: 767px)
-			display: none
 	p
 		font-size: 20px
 		font-weight: 300
@@ -219,18 +208,6 @@
 	background: $gray-section
 	padding-bottom: 70px
 	z-index: 11
-	span
-		font-size: 160px
-		font-family: "GothamProBold"
-		position: absolute
-		top: 52px
-		right: 0
-		z-index: 1
-		background: linear-gradient(to right, #ffffff, #ffffff, #e6e7e8, #e6e6e8)
-		-webkit-background-clip: text
-		color: transparent
-		@media(max-width: 767px)
-			display: none
 	&__block
 		border-radius: 20px
 		border: 2px solid #e7e7e7
@@ -259,18 +236,6 @@
 		padding-bottom: 55px
 		h2
 			color: $white
-		span
-			font-size: 160px
-			font-family: "GothamProBold"
-			position: absolute
-			top: 35px
-			right: 0
-			z-index: 1
-			background: linear-gradient(to right, #0a0a0a, #0f0e0e, #1a1a1a)
-			-webkit-background-clip: text
-			color: transparent
-			@media(max-width: 1024px)
-				display: none
 	p
 		font-size: 20px
 		font-weight: 300
@@ -339,17 +304,6 @@
 		padding-bottom: 50px
 	.heading
 		padding-bottom: 60px
-		span
-			font-size: 160px
-			font-family: "GothamProBold"
-			position: absolute
-			top: 52px
-			right: 0
-			z-index: 1
-			opacity: 0.1
-			color: $gray
-			@media(max-width: 800px)
-				display: none
 .function
 	position: relative
 	background: $gray-section
@@ -361,21 +315,6 @@
 				font-size: 50px
 			@media(max-width: 767px)
 				font-size: 35px
-		span
-			font-size: 160px
-			font-family: "GothamProBold"
-			position: absolute
-			top: 52px
-			right: 0
-			z-index: 1
-			color: #ffffff
-			@media(max-width: 767px)
-				display: none
-	.h2
-		span
-			background: linear-gradient(to right, #ffffff, #e6e6e8)
-			-webkit-background-clip: text
-			color: transparent
 	img
 		max-height: 380px
 		@media(max-width: 1024px)
@@ -414,16 +353,6 @@
 		padding-bottom: 50px
 	.heading
 		padding-bottom: 60px
-		span
-			font-size: 160px
-			font-family: "GothamProBold"
-			position: absolute
-			top: 52px
-			right: 0
-			z-index: 1
-			color: #f7f7f8
-			@media(max-width: 1024px)
-				display: none
 	p
 		font-weight: 300
 		font-size: 18px
@@ -456,18 +385,6 @@
 		padding-bottom: 60px
 		h2
 			color: $white
-		span
-			font-size: 160px
-			font-family: "GothamProBold"
-			position: absolute
-			top: 52px
-			right: 0
-			z-index: 1
-			background: linear-gradient(to right, #1a1a1a, #1a1a1a, #0a0a0a)
-			-webkit-background-clip: text
-			color: transparent
-			@media(max-width: 900px)
-				display: none
 	.container
 		position: relative
 .advisors
@@ -475,16 +392,6 @@
 	background: $white
 	.heading
 		padding-bottom: 60px
-		span
-			font-size: 160px
-			font-family: "GothamProBold"
-			position: absolute
-			top: 52px
-			right: 0
-			z-index: 1
-			color: #f7f7f8
-			@media(max-width: 1105px)
-				display: none
 	&__block
 		margin-bottom: 100px
 		a
@@ -529,18 +436,6 @@
 	background: $gray-section
 	.heading
 		padding-bottom: 60px
-		span
-			font-size: 160px
-			font-family: "GothamProBold"
-			position: absolute
-			top: 52px
-			right: 0
-			z-index: 1
-			background: linear-gradient(to right, #ffffff, #ffffff, #ffffff, #f9f9fa, #e6e7e8)
-			-webkit-background-clip: text
-			color: transparent
-			@media(max-width: 1024px)
-				display: none
 	a
 		margin-bottom: 30px
 		display: inline-block
@@ -578,16 +473,6 @@
 	position: relative
 	background: $white
 	padding-bottom: 70px
-	span
-		font-size: 160px
-		font-family: "GothamProBold"
-		position: absolute
-		top: 52px
-		right: 0
-		z-index: 1
-		color: #f7f7f8
-		@media(max-width: 767px)
-			display: none
 	.question
 		margin-bottom: 1.5em
 	p
@@ -631,59 +516,42 @@
 		transform: rotate(180deg)
 		color: $gray
 
-
-// TODO: issue #1
-.gray
+.publications
 	position: relative
 	background: $gray-section
 	padding-bottom: 160px
-	.heading
-		span
-			font-size: 160px
-			font-family: "GothamProBold"
-			position: absolute
-			top: 52px
-			right: 0
-			z-index: 1
-			background: linear-gradient(to right, #ffffff, #ffffff, #ffffff, #f9f9fa, #e6e7e8)
-			-webkit-background-clip: text
-			color: transparent
-			@media(max-width: 1024px)
-				display: none
-
-#publications
-		.thumbnail
-			max-width: 270px
-			.caption
+	.thumbnail
+		max-width: 270px
+		.caption
+			margin-top: 20px
+			padding: 15px 25px
+			border-left: solid 2px #f0f0f0
+			h3
+				font-size: 18px
+				line-height: 30px
+				color: $black
+				font-weight: 500
+				position: relative
+				text-transform: uppercase
+			h3:after
+				content: ' '
+				display: block
+				height: 2px
+				width: 30px
+				background: #f0be9c
+				margin: 10px 0
+			p
+				font-size: 13px
+				line-height: 1.5
 				margin-top: 20px
-				padding: 15px 25px
-				border-left: solid 2px #f0f0f0
-				h3
-					font-size: 18px
-					line-height: 30px
+				a.btn
+					background: transparent
+					border: solid 1px #e0e0e0
 					color: $black
-					font-weight: 500
-					position: relative
-					text-transform: uppercase
-				h3:after
-					content: ' '
-					display: block
-					height: 2px
-					width: 30px
-					background: #f0be9c
-					margin: 10px 0
-				p
-					font-size: 13px
-					line-height: 1.5
-					margin-top: 20px
-					a.btn
-						background: transparent
-						border: solid 1px #e0e0e0
-						color: $black
-						align: center
-						padding: 10px 50px
+					align: center
+					padding: 10px 50px
 
-#publications
+.publications
 	.flex-wrap
 		display: flex
 		flex-wrap: wrap
@@ -693,35 +561,23 @@
 		margin: 1.5em
 
 @media(min-width: 650px)
-	#publications
+	.publications
 		.flex-wrap
 			justify-content: center
 			.thumbnail
 				margin: 1em
 
 @media(min-width: 947px)
-	#publications
+	.publications
 		.flex-wrap
 			justify-content: space-between
 			.thumbnail
 				margin: 5px
 
-.white
+.partners
 	position: relative
 	background: $white
 	padding-bottom: 70px
-	span
-		font-size: 160px
-		font-family: "GothamProBold"
-		position: absolute
-		top: 52px
-		right: 0
-		z-index: 1
-		color: #f7f7f8
-		@media(max-width: 767px)
-			display: none
-
-#partners
 	.flex-wrap
 		display: flex
 		flex-wrap: wrap
@@ -729,17 +585,17 @@
 			margin: 0.5em
 
 @media(max-width: 1154px)
-	#partners
+	.partners
 		.flex-wrap
 			justify-content: center
 
 @media(max-width: 685px)
-	#partners
+	.partners
 		.flex-wrap
 			justify-content: center
 	
 @media(min-width: 1154px)
-	#partners
+	.partners
 		.flex-wrap
 			justify-content: center
 
@@ -766,6 +622,44 @@ span.big-amount
 	margin: 0
 	background: none
 	display: inline-block
+
+// .heading styles ------------------------------------
+.heading
+	span
+		text-align: right
+		font-size: 160px
+		font-family: "GothamProBold"
+		position: absolute
+		top: 35px
+		right: 0
+		@media(max-width: 1024px)
+			display: none
+
+.white
+	.heading
+		span
+			color: #f7f7f8
+
+.light
+	.heading
+		span
+			// background: linear-gradient(to right, #ffffff, #ffffff, #e6e7e8, #e6e6e8)	// .advantages
+			// background: linear-gradient(to right, #ffffff, #e6e6e8)	// .function
+			background: linear-gradient(to right, #ffffff, #ffffff, #ffffff, #f9f9fa, #e6e7e8)	// .team, .publications
+			-webkit-background-clip: text
+			color: transparent
+
+.dark
+	.heading
+		span
+			// background: linear-gradient(to right, #0a0a0a, #0f0e0e, #1a1a1a)	// .client
+			background: linear-gradient(to right, #1a1a1a, #1a1a1a, #0a0a0a)	// .roadshow
+			-webkit-background-clip: text
+			color: transparent
+// end .heading styles --------------------------------
+
+.content
+	position: relative
 
 table
 	border-spacing: 0
