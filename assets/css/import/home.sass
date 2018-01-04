@@ -724,21 +724,77 @@ p
 			font-weight: 300
 			line-height: 2em
 
+// footnote styles ------------------------------------
+html
+	counter-reset: footnote footnote-ref
+
+.footnote
+	counter-increment: footnote
+	margin: 1em 0
+	padding-top: 1em
+	border-top: solid 1px #eee
+	sup::before
+		content: counter(footnote) ' '
+
+.footnote-ref
+	counter-increment: footnote-ref
+.footnote-ref::before
+	content: counter(footnote-ref) ' '
+// end footnote styles --------------------------------
+
+#s2-market img
+	width: 500px
+
+#acknowledgments
+	.logo
+		width: 185px
+		margin-top: 150px
+		margin-bottom: 20px
+	small
+		display: block
+		margin-bottom: 120px
+
 blockquote
 	border-left: solid 4px #ccc
 	padding-left: 1em
 	margin-left: 0
 
+.text-center
+	text-align: center
+
 table
 	border-spacing: 0
 	border-collapse: collapse
+	margin: 1em 0
 	&.table
 		width: 100%
 		max-width: 100%
-		& > tr > td, & > tbody > tr > td, & > thead > tr > td, & > thead > tr > th, & > tfoot > tr > td
+		td
 			padding: 8px
 			vertical-align: top
-
 	&.table-bordered
-		& > tr > td, & > tbody > tr > td, & > thead > tr > td, & > thead > tr > th, & > tfoot > tr > td
+		td
 			border: 1px solid #ddd
+		.legend
+			border: none
+	.legend
+		width: 24px
+		padding: 0
+		vertical-align: middle
+		span
+			display: block
+			height: 16px
+			width: 16px
+			border-radius: 100%
+		.red
+			background: #db4437
+		.yellow
+			background: #f4b400
+		.blue
+			background: #4285f4
+		.green
+			background: #0f9d58
+		.mint
+			background: #54ca95
+		.purple
+			background: #3f4ab7
