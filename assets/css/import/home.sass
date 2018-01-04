@@ -451,7 +451,12 @@
 			margin: 20px auto
 		.icon-linkedin
 			position: absolute
-			bottom: 7px
+			top: 50%
+			-webkit-transform: translateY(-50%)
+			-moz-transform: translateY(-50%)
+			-ms-transform: translateY(-50%)
+			-o-transform: translateY(-50%)
+			transform: translateY(-50%)
 			padding-left: 10px
 			color: $linked-in-blue
 		img
@@ -544,7 +549,7 @@
 	.flex-wrap
 		display: flex
 		flex-wrap: wrap
-		justify-content: center
+		justify-content: flex-start
 	.thumbnail
 		max-width: 270px
 		margin: 1.5em
@@ -552,14 +557,14 @@
 @media(min-width: 650px)
 	.publications
 		.flex-wrap
-			justify-content: center
+			justify-content: flex-start
 			.thumbnail
 				margin: 1em
 
 @media(min-width: 947px)
 	.publications
 		.flex-wrap
-			justify-content: space-between
+			justify-content: flex-start
 			.thumbnail
 				margin: 5px
 
