@@ -231,17 +231,13 @@
 				margin-right: 0
 .client
 	position: relative
-	background: #111111
 	.heading
 		padding-bottom: 55px
-		h2
-			color: $white
 	p
 		font-size: 20px
 		font-weight: 300
 		padding-right: 30px
 		line-height: 30px
-		color: $gray
 		@media(max-width: 767px)
 			padding-right: 0
 	&__img
@@ -380,11 +376,8 @@
 			font-size: 25px
 .roadshow
 	position: relative
-	background: #131414
 	.heading
 		padding-bottom: 60px
-		h2
-			color: $white
 	.container
 		position: relative
 .advisors
@@ -646,16 +639,26 @@ span.big-amount
 			color: transparent
 
 .dark
+	background: #111111	// .client
+	// background: #131414	// .roadshow
 	.heading
+		h2
+			color: $white
 		span
 			// background: linear-gradient(to right, #0a0a0a, #0f0e0e, #1a1a1a)	// .client
 			background: linear-gradient(to right, #1a1a1a, #1a1a1a, #0a0a0a)	// .roadshow
 			-webkit-background-clip: text
 			color: transparent
+	p
+		color: $gray
 
 .faq, .document
 	.heading
 		padding: 2em 0 1em
+
+.heading.text-bg
+	padding: 100px 0
+
 // end .heading styles --------------------------------
 
 .content
@@ -663,14 +666,15 @@ span.big-amount
 
 p
 	padding: 0.5em 0
-	font-size: 16px
+	font-size: 20px
 	font-weight: 300
 	line-height: 30px
 
+.todo
+	color: red
+
 .document
 	padding-bottom: 3em
-	.todo
-		color: red
 	.row
 		counter-reset: section
 		h4.numbered::before
@@ -678,9 +682,11 @@ p
 			content: counter(section) '. '
 		ol.numbered
 			counter-reset: section
-		ol, ol.numbered
+		ol#wp-toc-continue
+			counter-reset: section 7
+		ol, ol.numbered, ol#wp-toc-continue
 			list-style-type: none
-			li::before
+		ol.numbered > li::before, ol#wp-toc-continue > li::before
 				counter-increment: section
 				content: counter(section) '. '
 				font-weight: bolder
@@ -704,17 +710,24 @@ p
 		h4
 			margin-top: 0.5em
 			line-height: 2em
-			font-size: 1.1em
+			font-size: 1.2em
 		ol, ul.bulleted
 			padding-left: 2em
 		ul.bulleted
 			list-style-type: disc
+		ul.bulleted > li > ul.bulleted
+			list-style-type: circle
 		li
 			margin-top: 0
 			margin-bottom: 0.5em
-			font-size: 16px
+			font-size: 20px
 			font-weight: 300
 			line-height: 2em
+
+blockquote
+	border-left: solid 4px #ccc
+	padding-left: 1em
+	margin-left: 0
 
 table
 	border-spacing: 0
