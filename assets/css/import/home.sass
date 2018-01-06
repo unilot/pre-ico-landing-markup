@@ -205,7 +205,6 @@
 			display: none
 .advantages
 	position: relative
-	background: $gray-section
 	padding-bottom: 70px
 	z-index: 11
 	&__block
@@ -302,7 +301,6 @@
 		padding-bottom: 60px
 .function
 	position: relative
-	background: $gray-section
 	padding-bottom: 90px
 	.heading
 		padding-bottom: 60px
@@ -426,7 +424,6 @@
 				width: 100%
 .team
 	position: relative
-	background: $gray-section
 	.heading
 		padding-bottom: 60px
 	a
@@ -512,7 +509,6 @@
 
 .publications
 	position: relative
-	background: $gray-section
 	padding-bottom: 160px
 	.thumbnail
 		max-width: 270px
@@ -635,6 +631,7 @@ span.big-amount
 			color: #f7f7f8
 
 .light
+	background: $light-bg
 	.heading
 		span
 			// background: linear-gradient(to right, #ffffff, #ffffff, #e6e7e8, #e6e6e8)	// .advantages
@@ -750,6 +747,19 @@ html
 #s2-market img
 	width: 500px
 
+#s3-1
+	.content
+		padding: 1em 0
+	img
+		width: 120px
+	.content div:first-child
+		display: flex
+		justify-content: center
+		align-content: center
+
+#s7-roadmap
+	padding-bottom: 0
+
 #acknowledgments
 	.logo
 		width: 185px
@@ -774,11 +784,16 @@ table
 	&.table
 		width: 100%
 		max-width: 100%
+		td, th
+			// padding: 8px
+			padding: 1em
+			vertical-align: middle
 		td
-			padding: 8px
-			vertical-align: top
+			font-weight: 300
+		th, strong
+			font-weight: 400
 	&.table-bordered
-		td
+		td, th
 			border: 1px solid #ddd
 		.legend
 			border: none

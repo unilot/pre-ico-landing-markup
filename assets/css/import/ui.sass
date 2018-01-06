@@ -30,30 +30,40 @@ a
 //:hover
 	// transition: all 0.3s
 
-.heading 
-	padding: 100px 0
+.heading
 	position: relative
 	@media(max-width: 767px)
 		padding: 50px 0
-	h2
+	h2, h3
 		font-family: "GothamProBold"
-		color: $black
-		font-size: 55px
 		position: relative
 		z-index: 2
 		display: inline-block
+	h2
+		font-size: 55px
+		color: $black
 		@media(max-width: 560px)
 			font-size: 35px
-		&:before
-			content: ''
-			position: absolute
-			right: -120px
-			top: 30px
-			width: 100px
-			height: 3px
-			background-image: linear-gradient(to right, #f0bc9a, #f0dcbf)
-			@media(max-width: 560px)
-				display: none
+	h3
+		font-size: 42px
+		color: lighten($black, 20%)
+		@media(max-width: 560px)
+			font-size: 24px
+	h2:before
+		content: ''
+		position: absolute
+		right: -120px
+		top: 30px
+		width: 100px
+		height: 3px
+		background-image: linear-gradient(to right, #f0bc9a, #f0dcbf)
+		@media(max-width: 560px)
+			display: none
+.heading
+	padding: 100px 0
+.sub.heading
+	padding: 24px 0
+
 .btn
 	padding: 17px 30px
 	background-image: linear-gradient(to right, #4d2ce0, #8453f7)
@@ -79,7 +89,13 @@ a
 	top: 250px
 	left: 10px
 
-
-
-
-
+// Bootstrap3 styles copied to the project
+// Damn the choice not to use it from the very beginning
+.img-responsive
+	max-width: 100%
+	height: auto
+	display: block
+.center-block
+	display: block
+	margin-left: auto
+	margin-right: auto
