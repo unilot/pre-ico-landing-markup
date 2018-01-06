@@ -315,30 +315,31 @@
 			width: 70%
 		@media(max-width: 767px)
 			width: 100%
-	p
+	.legend
 		position: relative
 		padding-left: 25px
 		line-height: 30px
 		color: #03034b
 		font-size: 15px
-		span
-			position: absolute
-			left: 0
-			top: 7px
-			width: 15px
-			height: 15px
-			border-radius: 60px
-			background: #000
-		.purple
-			background: #3f4ab7
-		.green
-			background: #54ca95
-		.blue
-			background: #79d9ea
-		.lilac
-			background: #9771d0
-		.yellow
-			background: #ffd6c0
+	.legend::before
+		display: inline-block
+		content: ' '
+		width: 15px
+		height: 15px
+		border-radius: 100%
+		margin-right: 0.8em
+		position: relative
+		top: 2px
+	.legend.purple::before
+		background: #3f4ab7
+	.legend.green::before
+		background: #54ca95
+	.legend.blue::before
+		background: #79d9ea
+	.legend.lilac::before
+		background: #9771d0
+	.legend.yellow::before
+		background: #ffd6c0
 .whitepaper
 	position: relative
 	background: $white
