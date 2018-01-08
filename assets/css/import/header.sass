@@ -1,4 +1,5 @@
 @import "color.sass" 
+$slideout-menu-width: 350px
 .slideout-menu
 	position: fixed
 	z-index: 8
@@ -6,7 +7,7 @@
 	bottom: 0
 	display: none 
 	overflow-y: scroll
-	max-width: 350px
+	max-width: $slideout-menu-width
 	min-height: 100vh
 	-webkit-overflow-scrolling: touch
 	background: #181a22
@@ -82,11 +83,13 @@
 		bottom: 0
 		padding-top: 25px
 		padding-bottom: 25px
-		width: 450px
+		width: $slideout-menu-width
 		border-top: 2px solid #2c2e3c
 		background: #181a22
-		i
-			padding-left: 45px
+		display: flex
+		justify-content: space-around
+		a
+			font-size: 16px
 			color: $white
 			&:hover
 				color: $red
