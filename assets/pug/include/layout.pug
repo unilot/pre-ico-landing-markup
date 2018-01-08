@@ -95,11 +95,16 @@ html(lang="ru")
 							.col-xs-7
 								img(src="img/sentence.png", alt="")
 					.social
-						i.icon-github
-						i.icon-telegram
-						i.icon-medium
-						i.icon-reddit
-						i.icon-twitter
+						a(href="{% github_organization %}" target="_blank")
+							i.icon-github
+						a(href="{% telegram_channel %}" target="_blank")
+							i.icon-telegram
+						a(href="{% medium_blog %}" target="_blank")
+							i.icon-medium
+						a(href="{% reddit_url %}" target="_blank")
+							i.icon-reddit
+						a(href="{% twitter_channel %}" target="_blank")
+							i.icon-twitter
 		#panel.slideout-panel.slideout-panel-right
 
 
