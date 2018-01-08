@@ -201,6 +201,55 @@ $card-photo-size: 150px
 	background: lighten($black, 15%)
 	margin: 1em auto
 
+blockquote
+	border-left: solid 4px #ccc
+	padding-left: 1em
+	margin-left: 0
+
+.text-center
+	text-align: center
+
+table
+	border-spacing: 0
+	border-collapse: collapse
+	margin: 1em 0
+	&.table
+		width: 100%
+		max-width: 100%
+		td, th
+			padding: 1em
+			vertical-align: middle
+		td
+			font-weight: 300
+		th, strong
+			font-weight: 400
+	&.table-bordered
+		td, th
+			border: 1px solid #ddd
+		.legend
+			border: none
+	.legend
+		width: 24px
+		padding: 0
+		vertical-align: middle
+		span
+			display: block
+			height: 16px
+			width: 16px
+			border-radius: 100%
+		.red
+			background: $chart-red
+		.yellow
+			background: $chart-yellow
+		.blue
+			background: $chart-blue
+		.green
+			background: $chart-green
+		.mint
+			background: $chart-mint
+		.purple
+			background: $chart-purple
+
 // Bootstrap3 styles copied to the project
 // Damn the choice not to use it from the very beginning
 .img-responsive
