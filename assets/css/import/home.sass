@@ -1,5 +1,5 @@
 @import "color.sass" 
-
+$scale-block-height: 58px
 .sentence
 	background: $light-gray
 	position: relative
@@ -123,17 +123,16 @@
 		span
 			position: absolute
 			z-index: 3
-			top: 10px
 			left: 46%
 			font-size: 20px
-			line-height: 22px
+			line-height: $scale-block-height
 			font-weight: 400
 			display: inline-block
 			color: $white
 		&_block
 			border-radius: 30px
 			position: absolute
-			height: 47px
+			height: $scale-block-height
 			background: #d83279
 			width: 53%
 			z-index: 1
