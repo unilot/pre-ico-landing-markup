@@ -92,6 +92,115 @@ a
 .nowrap
 	white-space: nowrap
 
+address
+	font-style: normal
+
+$card-border-color: #222222
+.card
+	border: 1px solid $card-border-color
+	border-radius: 15px
+	display: block
+	color: $white
+	padding: 20px
+	display: flex
+	justify-content: center
+
+$network-icon-size: 50px
+$network-larger-icon-size: 70px
+$telegram-color: #298fc2
+$reddit-color: #ff4500
+$twitter-color: #50abf1
+$facebook-color: #3a559f
+$linkedin-color: #0084b1
+$youtube-color: #e62117
+.card.network
+	align-items: center
+	font-weight: 300
+	&:hover
+		box-shadow: 0 10px 30px 3px $card-border-color
+	&.larger
+		background: $card-border-color
+		i
+			min-width: $network-larger-icon-size
+			width: $network-larger-icon-size
+			height: $network-larger-icon-size
+			line-height: $network-larger-icon-size
+			font-size: $network-larger-icon-size / 2
+		.icon-github
+			font-size: $network-larger-icon-size
+		span
+			font-size: 20px
+	i
+		display: block
+		background: $card-border-color
+		border-radius: 100%
+		min-width: $network-icon-size
+		width: $network-icon-size
+		height: $network-icon-size
+		line-height: $network-icon-size
+		font-size: $network-icon-size / 2
+		margin-right: 20px
+	.icon-github
+		background: transparent
+	.icon-telegram
+		background: $telegram-color
+	.icon-medium
+		border: solid 1px lighten($card-border-color, 10%)
+	.icon-reddit
+		background: $reddit-color
+	.icon-twitter
+		background: $twitter-color
+	.icon-facebook
+		background: $facebook-color
+	.icon-linkedin
+		background: $linkedin-color
+	.icon-steemit
+		background-color: $white
+		background-image: url(../img/steemit-logo.png)
+		background-repeat: no-repeat
+		background-size: $network-icon-size / 2
+		background-position: center
+	.icon-youtube
+		background: $youtube-color
+
+$card-photo-size: 150px
+.card.person
+	max-width: 460px
+	margin: 0 auto
+	div
+		max-height: $card-photo-size
+	.photo
+		border-radius: 100%
+		margin-right: 20px
+		img
+			width: $card-photo-size
+	.info
+		text-align: left
+		display: flex
+		flex-direction: column
+		justify-content: center
+		*
+			margin: 0
+			padding: 0
+		.name
+			font-size: 28px
+			font-weight: 500
+			margin-bottom: 6px
+		.position
+			margin-bottom: 12px
+
+.subtle
+	font-family: "Arial", sans-serif
+	font-size: 16px
+	color: $gray
+
+.line
+	display: block
+	height: 2px
+	width: 84px
+	background: lighten($black, 15%)
+	margin: 1em auto
+
 // Bootstrap3 styles copied to the project
 // Damn the choice not to use it from the very beginning
 .img-responsive
