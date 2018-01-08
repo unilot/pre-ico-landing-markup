@@ -688,49 +688,14 @@ p
 		h4.numbered::before
 			counter-increment: section
 			content: counter(section) '. '
-		ol.numbered
-			counter-reset: section
-		ol#wp-toc-continue
-			counter-reset: section 7
-		ol, ol.numbered, ol#wp-toc-continue
-			list-style-type: none
-		ol.numbered > li::before, ol#wp-toc-continue > li::before
-				counter-increment: section
-				content: counter(section) '. '
-				font-weight: bolder
-		ol.nested
-			counter-reset: subsection
-			li::before
-				counter-increment: subsection
-				content: counter(section) '.' counter(subsection) '. '
-		ol.latin
-			counter-reset: latin
-			li::before
-				counter-increment: latin
-				content: counter(latin, lower-alpha) '. '
-		ol.roman
-			counter-reset: roman
-			li::before
-				counter-increment: roman
-				content: counter(roman, lower-roman) '. '
 		h3
 			margin-top: 1.5em
 		h4
 			margin-top: 0.5em
 			line-height: 2em
 			font-size: 1.2em
-		ol, ul.bulleted
+		ol
 			padding-left: 2em
-		ul.bulleted
-			list-style-type: disc
-		ul.bulleted > li > ul.bulleted
-			list-style-type: circle
-		li
-			margin-top: 0
-			margin-bottom: 0.5em
-			font-size: 20px
-			font-weight: 300
-			line-height: 2em
 
 // footnote styles ------------------------------------
 html
@@ -751,8 +716,15 @@ html
 // end footnote styles --------------------------------
 
 // whitepaper styles ----------------------------------
+#whitepaper
+	.pull-up, .row.heading:not(.sub) + .row.content
+		margin-top: -80px
+
 #s1-introduction
 	counter-reset: chapter
+	
+ol#wp-toc-continue
+	counter-reset: section 7
 
 section.numbered
 	counter-increment: chapter
