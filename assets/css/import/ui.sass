@@ -30,30 +30,40 @@ a
 //:hover
 	// transition: all 0.3s
 
-.heading 
-	padding: 100px 0
+.heading
 	position: relative
 	@media(max-width: 767px)
 		padding: 50px 0
-	h2
+	h2, h3
 		font-family: "GothamProBold"
-		color: $black
-		font-size: 55px
 		position: relative
 		z-index: 2
 		display: inline-block
+	h2
+		font-size: 55px
+		color: $black
 		@media(max-width: 560px)
 			font-size: 35px
-		&:before
-			content: ''
-			position: absolute
-			right: -120px
-			top: 30px
-			width: 100px
-			height: 3px
-			background-image: linear-gradient(to right, #f0bc9a, #f0dcbf)
-			@media(max-width: 560px)
-				display: none
+	h3
+		font-size: 42px
+		color: lighten($black, 20%)
+		@media(max-width: 560px)
+			font-size: 24px
+	h2:after
+		content: ''
+		position: absolute
+		right: -120px
+		top: 30px
+		width: 100px
+		height: 3px
+		background-image: linear-gradient(to right, #f0bc9a, #f0dcbf)
+		@media(max-width: 560px)
+			display: none
+.heading
+	padding: 100px 0
+.sub.heading
+	padding: 24px 0
+
 .btn
 	padding: 17px 30px
 	background-image: linear-gradient(to right, #4d2ce0, #8453f7)
@@ -79,7 +89,211 @@ a
 	top: 250px
 	left: 10px
 
+.nowrap
+	white-space: nowrap
 
+address
+	font-style: normal
 
+$card-border-color: #222222
+.card
+	border: 1px solid $card-border-color
+	border-radius: 15px
+	display: block
+	color: $white
+	padding: 20px
+	display: flex
+	justify-content: center
 
+$network-icon-size: 50px
+$network-larger-icon-size: 70px
+$telegram-color: #298fc2
+$reddit-color: #ff4500
+$twitter-color: #50abf1
+$facebook-color: #3a559f
+$linkedin-color: #0084b1
+$youtube-color: #e62117
+.card.network
+	align-items: center
+	font-weight: 300
+	&:hover
+		box-shadow: 0 10px 30px 3px $card-border-color
+	&.larger
+		background: $card-border-color
+		i
+			min-width: $network-larger-icon-size
+			width: $network-larger-icon-size
+			height: $network-larger-icon-size
+			line-height: $network-larger-icon-size
+			font-size: $network-larger-icon-size / 2
+		.icon-github
+			font-size: $network-larger-icon-size
+		span
+			font-size: 20px
+	i
+		display: block
+		background: $card-border-color
+		border-radius: 100%
+		min-width: $network-icon-size
+		width: $network-icon-size
+		height: $network-icon-size
+		line-height: $network-icon-size
+		font-size: $network-icon-size / 2
+		margin-right: 20px
+	.icon-github
+		background: transparent
+	.icon-telegram
+		background: $telegram-color
+	.icon-medium
+		border: solid 1px lighten($card-border-color, 10%)
+	.icon-reddit
+		background: $reddit-color
+	.icon-twitter
+		background: $twitter-color
+	.icon-facebook
+		background: $facebook-color
+	.icon-linkedin
+		background: $linkedin-color
+	.icon-steemit
+		background-color: $white
+		background-image: url(../img/steemit-logo.png)
+		background-repeat: no-repeat
+		background-size: $network-icon-size / 2
+		background-position: center
+	.icon-youtube
+		background: $youtube-color
 
+$card-photo-size: 150px
+.card.person
+	max-width: 460px
+	margin: 0 auto
+	div
+		max-height: $card-photo-size
+	.photo
+		border-radius: 100%
+		margin-right: 20px
+		img
+			width: $card-photo-size
+	.info
+		text-align: left
+		display: flex
+		flex-direction: column
+		justify-content: center
+		*
+			margin: 0
+			padding: 0
+		.name
+			font-size: 28px
+			font-weight: 500
+			margin-bottom: 6px
+		.position
+			margin-bottom: 12px
+
+.subtle
+	font-family: "Arial", sans-serif
+	font-size: 16px
+	color: $gray
+
+.line
+	display: block
+	height: 2px
+	width: 84px
+	background: lighten($black, 15%)
+	margin: 1em auto
+
+blockquote
+	border-left: solid 4px #ccc
+	padding-left: 1em
+	margin-left: 0
+
+.text-center
+	text-align: center
+
+table
+	border-spacing: 0
+	border-collapse: collapse
+	margin: 1em 0
+	&.table
+		width: 100%
+		max-width: 100%
+		td, th
+			padding: 1em
+			vertical-align: middle
+		td
+			font-weight: 300
+		th, strong
+			font-weight: 400
+	&.table-bordered
+		td, th
+			border: 1px solid #ddd
+		.legend
+			border: none
+	.legend
+		width: 24px
+		padding: 0
+		vertical-align: middle
+		span
+			display: block
+			height: 16px
+			width: 16px
+			border-radius: 100%
+		.red
+			background: $chart-red
+		.yellow
+			background: $chart-yellow
+		.blue
+			background: $chart-blue
+		.green
+			background: $chart-green
+		.mint
+			background: $chart-mint
+		.purple
+			background: $chart-purple
+
+ol.numbered
+	counter-reset: section
+ol, ol.numbered, ol#wp-toc-continue
+	list-style-type: none
+ol.numbered > li::before, ol#wp-toc-continue > li::before
+		counter-increment: section
+		content: counter(section) '. '
+		font-weight: bolder
+ol.nested
+	counter-reset: subsection
+	li::before
+		counter-increment: subsection
+		content: counter(section) '.' counter(subsection) '. '
+		font-weight: bolder
+ol.latin
+	counter-reset: latin
+	li::before
+		counter-increment: latin
+		content: counter(latin, lower-alpha) '. '
+ol.roman
+	counter-reset: roman
+	li::before
+		counter-increment: roman
+		content: counter(roman, lower-roman) '. '
+ul.bulleted
+	list-style-type: disc
+	padding-left: 2em
+ul.bulleted > li > ul.bulleted
+	list-style-type: circle
+ol.numbered, ol.latin, ol.roman, ol.nested, ul.bulleted, ol#wp-toc-continue
+	li
+		margin-top: 0
+		margin-bottom: 0.5em
+		font-size: 20px
+		font-weight: 300
+		line-height: 2em
+
+// Bootstrap3 styles copied to the project
+// Damn the choice not to use it from the very beginning
+.img-responsive
+	max-width: 100%
+	height: auto
+	display: block
+.center-block
+	display: block
+	margin-left: auto
+	margin-right: auto

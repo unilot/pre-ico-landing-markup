@@ -252,13 +252,7 @@ block content
 							h2 Token Distribution
 					.row.content
 						.col-md-12
-							img(src="img/function-1.png", alt="")
-							p 78% Purchasers 
-								span.purple
-							p 12% Team 
-								span.green
-							p 10% Early Adopters & Founders 
-								span.blue
+							include include/token-distribution
 				.col-md-5.col-xs-12
 					.row.heading
 						.col-md-12
@@ -266,17 +260,7 @@ block content
 							span Tokens Flow
 					.row.content
 						.col-md-12
-							img(src="img/function-2.png", alt="")
-							p 40% Marketing
-								span.purple
-							p 30% Platform Development and expansion
-								span.green
-							p 15% Business Development and Partnerships
-								span.lilac
-							p 10% Legal and Misc Operations
-								span.blue
-							p 5% Consultants
-								span.yellow
+							include include/use-of-funds
 	
 	section.whitepaper.white#link2
 		.container
@@ -390,72 +374,7 @@ block content
 					h2 Advisors
 					span Our Advisors
 			.row.content
-				.col-md-4.col-sm-6.col-xs-12
-					.advisors__block
-						.row
-							.col-xs-5
-								img(src="img/advisors/Council.png", alt="")
-							.col-xs-7
-								a(href="#") COUNCIL
-									i.icon-linkedin
-								b Legal issues partner
-								span
-								p The company works in a partnership agreement with a number of leading legal companies of Russia, Europe, the USA, and South Korea. 
-				.col-md-4.col-sm-6.col-xs-12
-					.advisors__block
-						.row
-							.col-xs-5
-								img(src="img/advisors/Timur-Mukminov.png", alt="")
-							.col-xs-7
-								a(href="#") Timur Mukminov
-									i.icon-linkedin
-								b International Relations and Business	Intelligence advisor
-								span
-								p Business Process Advisor: Program Portfolio & Tech. Project Management, Infrastructure, Agile, Global Eng. Management; ex-Program Manager Network Operations at Google Inc. 
-				.col-md-4.col-sm-6.col-xs-12
-					.advisors__block
-						.row
-							.col-xs-5
-								img(src="img/advisors/Sergey-Skabelkin.png", alt="")
-							.col-xs-7
-								a(href="#") Sergey Skabelkin
-									i.icon-linkedin
-								b Strategic product development advisor
-								span
-								p Blockchain Evangelist, Co-founder of FinTechCluster, Mobile wallet and online service enterprise architect, CEO of playhall.io
-				.col-md-4.col-sm-6.col-xs-12
-					.advisors__block
-						.row
-							.col-xs-5
-								img(src="img/advisors/Azamat-Kurbanov.png", alt="")
-							.col-xs-7
-								a(href="#") Azamat Kurbanov
-									i.icon-linkedin
-								b Marketing advisor
-								span
-								p Co-founder of telegraf.money who successfully led preICO worth $7 000 000. A self-starter and successful entrepreneur, more than 10 years experience on marketing and creating multimillion worth companies.
-				.col-md-4.col-sm-6.col-xs-12
-					.advisors__block
-						.row
-							.col-xs-5
-								img(src="img/advisors/Bagrinovski-Bogdan.png", alt="")
-							.col-xs-7
-								a(href="#") Bagrinovski Bogdan
-									i.icon-linkedin
-								b Expert in Blockchain Loterry
-								span
-								p More then 10 year experience in Auction and Lottery business, creating brands like Intuitsia, Credsberry etc. 
-				.col-md-4.col-sm-6.col-xs-12
-					.advisors__block
-						.row
-							.col-xs-5
-								img(src="img/advisors/Bakhram-Fayzutdinov.png", alt="")
-							.col-xs-7
-								a(href="#") Bakhram Fayzutdinov
-									i.icon-linkedin
-								b Mobile product development and promotion advisor
-								span
-								p Founder of Amayasoft company, head of MyBookTools technology development. More than 10 years on programming, product management and business development.
+				include include/advisors
 	
 	section.team.light
 		.container
@@ -464,62 +383,7 @@ block content
 					h2 Team
 					span Unilot Team
 			.row.content.center-xs
-				.col-md-3.col-sm-4.col-xs-12
-					a(href="#")
-						img(src="img/team/Ilya-Son.png", alt="")
-						p Ilya Son
-							i.icon-linkedin
-						b Founder
-						span
-				.col-md-3.col-sm-4.col-xs-12
-					a(href="#")
-						img(src="img/team/Alexander-Lushnikov.png", alt="")
-						p Alexander Lushnikov
-							i.icon-linkedin
-						b Smart contracts developer
-						span
-				.col-md-3.col-sm-4.col-xs-12
-					a(href="#")
-						img(src="img/team/Arseniy-Aganov.png", alt="")
-						p Arseniy Aganov
-							i.icon-linkedin
-						b Senior Android developer
-						span
-				.col-md-3.col-sm-4.col-xs-12
-					a(href="#")
-						img(src="img/team/Shovkat-Kukanbaev.png", alt="")
-						p Shovkat Kukanbaev
-							i.icon-linkedin
-						b UI/UX Designer
-						span
-				.col-md-3.col-sm-4.col-xs-12
-					a(href="#")
-						img(src="img/team/Darya-Kadirova.png", alt="")
-						p Darya Kadirova
-							i.icon-linkedin
-						b Marketing manager
-						span
-				.col-md-3.col-sm-4.col-xs-12
-					a(href="#")
-						img(src="img/team/Azat-Khuziyakhmetov.png", alt="")
-						p Azat Khuziyakhmetov
-							i.icon-linkedin
-						b Backend developer
-						span
-				.col-md-3.col-sm-4.col-xs-12
-					a(href="#")
-						img(src="img/team/Bakhodir-Ashirmatov.png", alt="")
-						p Bakhodir Ashirmatov
-							i.icon-linkedin
-						b Senior iOS developer
-						span
-				.col-md-3.col-sm-4.col-xs-12
-					a(href="#")
-						img(src="img/team/Daniel-Khalupskiy.png", alt="")
-						p Daniel Khalupskiy
-							i.icon-linkedin
-						b PR
-						span
+				include include/team
 
 	section.faq.white#link3
 		.container
