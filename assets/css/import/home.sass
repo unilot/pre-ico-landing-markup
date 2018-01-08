@@ -61,7 +61,7 @@
 		padding-bottom: 45px
 		@media(max-width: 670px)
 			font-size: 35px
-		&:before
+		&:after
 			content: ''
 			position: absolute
 			right: 60px
@@ -750,6 +750,17 @@ html
 	content: counter(footnote-ref) ' '
 // end footnote styles --------------------------------
 
+// whitepaper styles ----------------------------------
+#s1-introduction
+	counter-reset: chapter
+
+section.numbered
+	counter-increment: chapter
+	h2::before
+		content: counter(chapter) '. '
+		font-family: 'GothamProLight'
+		color: lighten($black, 50%)
+
 #s2-market img
 	width: 500px
 
@@ -793,3 +804,4 @@ html
 	small
 		display: block
 		margin-bottom: 120px
+// end whitepaper styles ------------------------------
