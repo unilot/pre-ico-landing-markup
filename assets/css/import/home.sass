@@ -699,17 +699,23 @@ html
 	counter-reset: footnote footnote-ref
 
 .footnote
-	counter-increment: footnote
 	margin: 1em 0
 	padding-top: 1em
 	border-top: solid 1px #eee
+
+.footnote:not(.footnote-star)
+	counter-increment: footnote
 	sup::before
 		content: counter(footnote) ' '
 
-.footnote-ref
+.footnote-ref:not(.footnote-star)
 	counter-increment: footnote-ref
+
 .footnote-ref::before
 	content: counter(footnote-ref) ' '
+
+.footnote-star::before
+	content: '* '
 // end footnote styles --------------------------------
 
 // whitepaper styles ----------------------------------
