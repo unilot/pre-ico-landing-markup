@@ -260,7 +260,7 @@ ol.numbered > li::before, ol#wp-toc-continue > li::before
 		font-weight: bolder
 ol.nested
 	counter-reset: subsection
-	li::before
+	> li::before
 		counter-increment: subsection
 		content: counter(section) '.' counter(subsection) '. '
 		font-weight: bolder
