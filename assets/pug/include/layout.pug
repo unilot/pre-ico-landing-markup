@@ -74,16 +74,16 @@ html(lang="ru")
 			.row
 				.col-xs-12#link-1
 					ul
-						li
-							a.font-roboto-light-18-px(href="#link1") What is Unilot
-						li
-							a.font-roboto-light-18-px(href="#link2") White Paper
-						li
-							a.font-roboto-light-18-px(href="#link3") FAQ
-						li
-							a.font-roboto-light-18-px(href="#") Upcoming Events
-						li
-							a.font-roboto-light-18-px(href="#") Contribute Now
+						if isWhitePaper
+							include nav-wp
+						else if isTerms
+							li Terms menu
+						else if isBounty
+							li Bounty menu
+						else if isAffiliate
+							li Affiliate menu
+						else
+							include nav-landing
 						li
 							include lng-menu
 					.unilot
