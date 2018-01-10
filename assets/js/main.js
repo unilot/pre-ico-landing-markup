@@ -172,3 +172,8 @@ var scene = $('.scene2').get(0);
 var parallaxInstance = new Parallax(scene);
 
 });
+
+function hideAlert() {
+  var alert = document.getElementById('alert');
+  alert.style.display = 'none';
+}

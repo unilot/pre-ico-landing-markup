@@ -21,6 +21,11 @@ html(lang="ru")
 		meta(name='application-name',content='Unilot')
 		meta(name='theme-color', content='#ffffff')
 	body
+		#alert.alert
+			p The Ethereum Network might be experiencing some delays and slow response due to high volume of transactions. Please, be patient.
+			p
+				a(href="#" onclick="hideAlert()") &times;
+
 		header.header
 			.container
 				.row.middle-xs
@@ -55,6 +60,7 @@ html(lang="ru")
 									.header__left__btn
 										a(href="#").btn Contribute Now
 										a(href="#").btn.none Contribute
+		
 		.sentence__social
 			p Contact Us
 			.sentence__social__block
@@ -111,7 +117,7 @@ html(lang="ru")
 		#panel.slideout-panel.slideout-panel-right
 
 
-
+			
 			block content
 			footer.footer
 				.container
