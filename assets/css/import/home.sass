@@ -110,6 +110,8 @@ $scale-block-height: 58px
 		padding: 10px 20px
 		margin-top: 15px
 		box-shadow: inset 0 1px 1px 0px #c9cbcf
+		box-sizing: border-box
+		height: $scale-block-height - 8px
 		p
 			font-weight: 400
 			font-size: 15px
@@ -121,9 +123,9 @@ $scale-block-height: 58px
 			@media(max-width: 400px)
 				font-size: 13px
 		span
-			position: absolute
+			// position: absolute
 			z-index: 3
-			left: 46%
+			// left: 46%
 			font-size: 20px
 			line-height: $scale-block-height
 			font-weight: 400
@@ -134,10 +136,14 @@ $scale-block-height: 58px
 			position: absolute
 			height: $scale-block-height
 			background: #d83279
-			width: 53%
+			width: $scale-block-height //53%
+			box-sizing: border-box
 			z-index: 1
 			left: 0
 			top: -4px
+			display: flex
+			justify-content: flex-end
+			padding-right: 15px
 			background-image: linear-gradient(to right, #d83279, #ff5b4e)
 			@media(max-width: 700px)
 				width: 55%
