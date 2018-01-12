@@ -147,7 +147,9 @@ $('.js-submit-on-change').change(function(event){
     $target.closest('form').submit();
 });
 
-$('.js-countdown').countdown("02/15/2018", function(event){
+var milestone = moment.tz('2018-02-17 19:00', 'UTC');
+
+$('.js-countdown').countdown(milestone.toDate(), function(event){
     $(this).text(event.strftime('%D : %H : %M : %S'))
 });
 
