@@ -1,4 +1,5 @@
-@import "color.sass" 
+@import 'color.sass', 'document.sass'
+
 .flex
 	display: flex
 body
@@ -255,43 +256,6 @@ table
 			background: $chart-mint
 		.purple
 			background: $chart-purple
-
-ol.numbered
-	counter-reset: section
-ol, ol.numbered, ol#wp-toc-continue
-	list-style-type: none
-ol.numbered > li::before, ol#wp-toc-continue > li::before
-		counter-increment: section
-		content: counter(section) '. '
-		font-weight: bolder
-ol.nested
-	counter-reset: subsection
-	> li::before
-		counter-increment: subsection
-		content: counter(section) '.' counter(subsection) '. '
-		font-weight: bolder
-ol.latin
-	counter-reset: latin
-	li::before
-		counter-increment: latin
-		content: counter(latin, lower-alpha) '. '
-ol.roman
-	counter-reset: roman
-	li::before
-		counter-increment: roman
-		content: counter(roman, lower-roman) '. '
-ul.bulleted
-	list-style-type: disc
-	padding-left: 2em
-ul.bulleted > li > ul.bulleted
-	list-style-type: circle
-ol.numbered, ol.latin, ol.roman, ol.nested, ul.bulleted, ol#wp-toc-continue
-	li
-		margin-top: 0
-		margin-bottom: 0.5em
-		font-size: 20px
-		font-weight: 300
-		line-height: 2em
 
 .alert
 	z-index: 25

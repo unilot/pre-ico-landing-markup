@@ -1,4 +1,4 @@
-@import "color.sass" 
+@import "color.sass"
 $scale-block-height: 58px
 .sentence
 	background: $light-gray
@@ -663,10 +663,6 @@ span.big-amount
 	p
 		color: $gray
 
-.faq, .document
-	.heading
-		padding: 2em 0 1em
-
 .heading.text-bg
 	padding: 100px 0
 
@@ -683,47 +679,6 @@ p
 
 .todo
 	color: red
-
-.document
-	padding-bottom: 3em
-	.row
-		counter-reset: section
-		h4.numbered::before
-			counter-increment: section
-			content: counter(section) '. '
-		h3
-			margin-top: 1.5em
-		h4
-			margin-top: 0.5em
-			line-height: 2em
-			font-size: 1.2em
-		ol
-			padding-left: 2em
-
-// footnote styles ------------------------------------
-html
-	counter-reset: footnote footnote-ref
-
-.footnote
-	margin: 1em 0
-	padding-top: 1em
-	border-top: solid 1px #eee
-
-.footnote:not(.footnote-star)
-	counter-increment: footnote
-	sup::before
-		content: counter(footnote) ' '
-
-.footnote-ref:not(.footnote-star)
-	counter-increment: footnote-ref
-
-.footnote-ref::before
-	content: counter(footnote-ref) ' '
-
-.footnote-star::before
-	content: '* '
-// end footnote styles --------------------------------
-
 // whitepaper styles ----------------------------------
 #whitepaper
 	.pull-up, .row.heading:not(.sub) + .row.content

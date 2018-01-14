@@ -1,0 +1,81 @@
+// document styles ----------------------------------------
+.document
+	padding-bottom: 3em
+	.row
+		counter-reset: section
+		h4.numbered::before
+			counter-increment: section
+			content: counter(section) '. '
+		h3
+			margin-top: 1.5em
+		h4
+			margin-top: 0.5em
+			line-height: 2em
+			font-size: 1.2em
+		ol
+			padding-left: 2em
+
+.document, .faq
+	.heading
+		padding: 2em 0 1em
+
+// list styles ----------------------------------------
+ol.numbered
+	counter-reset: section
+ol, ol.numbered, ol#wp-toc-continue
+	list-style-type: none
+ol.numbered > li::before, ol#wp-toc-continue > li::before
+		counter-increment: section
+		content: counter(section) '. '
+		font-weight: bolder
+ol.nested
+	counter-reset: subsection
+	> li::before
+		counter-increment: subsection
+		content: counter(section) '.' counter(subsection) '. '
+		font-weight: bolder
+ol.latin
+	counter-reset: latin
+	li::before
+		counter-increment: latin
+		content: counter(latin, lower-alpha) '. '
+ol.roman
+	counter-reset: roman
+	li::before
+		counter-increment: roman
+		content: counter(roman, lower-roman) '. '
+ul.bulleted
+	list-style-type: disc
+	padding-left: 2em
+ul.bulleted > li > ul.bulleted
+	list-style-type: circle
+ol.numbered, ol.latin, ol.roman, ol.nested, ul.bulleted, ol#wp-toc-continue
+	li
+		margin-top: 0
+		margin-bottom: 0.5em
+		font-size: 20px
+		font-weight: 300
+		line-height: 2em
+
+// footnote styles ------------------------------------
+html
+	counter-reset: footnote footnote-ref
+
+.footnote
+	margin: 1em 0
+	padding-top: 1em
+	border-top: solid 1px #eee
+
+.footnote:not(.footnote-star)
+	counter-increment: footnote
+	sup::before
+		content: counter(footnote) ' '
+
+.footnote-ref:not(.footnote-star)
+	counter-increment: footnote-ref
+
+.footnote-ref::before
+	content: counter(footnote-ref) ' '
+
+.footnote-star::before
+	content: '* '
