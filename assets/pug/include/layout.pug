@@ -1,168 +1,169 @@
 block vars
-	-var isWhitePaper = false;
-	-var isTerms = false;
-	-var isBounty = false;
-	-var isAffiliate = false;
+    -var isWhitePaper = false;
+    -var isTerms = false;
+    -var isBounty = false;
+    -var isAffiliate = false;
 
 doctype
 html(lang="ru")
-	head
-		meta(charset="UTF-8")
-		meta(content='width=device-width, initial-scale=1.0, user-scalable=no', name='viewport')
-		title Unilot
-		link(href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500&amp;subset=latin-ext" rel="stylesheet")
-		link(rel="stylesheet", href="css/main.css")
-		link(rel='apple-touch-icon', sizes='180x180', href='img/favicons/apple-touch-icon.png')
-		link(rel='icon', sizes='32x32', href='img/favicons/favicon-32x32.png')
-		link(rel='icon', sizes='16x16', href='img/favicons/favicon-16x16.png')
-		link(rel='manifest', href='img/favicons/manifest.json')
-		link(rel='mask-icon', href='img/favicons/safari-pinned-tab.svg', color='#ed9935')
-		meta(name='apple-mobile-web-app-title',content='Unilot')
-		meta(name='application-name',content='Unilot')
-		meta(name='theme-color', content='#ffffff')
-	body
-		header.header
-			.container
-				.row.middle-xs
-					.col-md-2.col-sm-12.col-xs-6.start-md.center-xs
-						.header__logo
-							.top-line-anchor
-								#sticky.sticky-element
-									.sticky-anchor
-									.sticky-content
-										.menu-open
-											a#btn(href='#menu')
-												span
-							a(href="#")
-								img(src="img/logo-header.svg", alt="")
-					.col-md-6
-						ul.flex.around-xs#link
-							li
-								a(href="#link1") What is Unilot
-							li
-								a(href="#link2") White Paper
-							li
-								a(href="faq.html") FAQ
-							li
-								a(href="#") Upcoming Events
-					.col-md-4.col-sm-12.col-xs-6
-						.header__left
-							.row
-								.col-md-4
-									.header__left__lng
-										include lng-menu
-								.col-md-8.col-xs-12.start-md.center-xs
-									.header__left__btn
-										a(href="#").btn Contribute Now
-										a(href="#").btn.none Contribute
-			#alert.alert
-				p The Ethereum Network might be experiencing some delays and slow response due to high volume of transactions. Please, be patient.
-				p
-					a(href="#" onclick="hideAlert()") &times;
-		
-		.sentence__social
-			p Contact Us
-			.sentence__social__block
-				a(href="#")
-					i.icon-github
-				a(href="")
-					i.icon-telegram
-				a(href="")
-					i.icon-medium
-				a(href="")
-					i.icon-reddit
-				a(href="")
-					i.icon-twitter
-		#menu.slideout-menu.slideout-menu-right
-			.menu-close
-				span
-			.row
-				.col-xs-12#link-1
-					ul
-						if isWhitePaper
-							include nav-wp
-						else if isTerms
-							include nav-terms
-						else if isBounty
-							include nav-bounty
-						else if isAffiliate
-							include nav-affiliate
-						else
-							include nav-landing
-						li
-							include lng-menu
-					.unilot
-						.row
-							.col-xs-5
-								img(src="img/logo.svg", alt="")
-								p Скачайте приложение Unilot App и будьте всегда в курсе новых лотерей
-								a(href="#") App Store
-									img(src="img/apple.svg", alt="")
-								a(href="#") Google Play
-									img(src="img/google-play.svg", alt="")
-							.col-xs-7
-								img(src="img/sentence.png", alt="")
-					.social
-						a(href="{% github_organization %}" target="_blank")
-							i.icon-github
-						a(href="{% telegram_channel %}" target="_blank")
-							i.icon-telegram
-						a(href="{% medium_blog %}" target="_blank")
-							i.icon-medium
-						a(href="{% reddit_url %}" target="_blank")
-							i.icon-reddit
-						a(href="{% twitter_channel %}" target="_blank")
-							i.icon-twitter
-		#panel.slideout-panel.slideout-panel-right
+    head
+        meta(charset="UTF-8")
+        meta(content='width=device-width, initial-scale=1.0, user-scalable=no', name='viewport')
+        title Unilot
+        link(href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500&amp;subset=latin-ext" rel="stylesheet")
+        link(rel="stylesheet", href="css/main.css")
+        link(rel='apple-touch-icon', sizes='180x180', href='img/favicons/apple-touch-icon.png')
+        link(rel='icon', sizes='32x32', href='img/favicons/favicon-32x32.png')
+        link(rel='icon', sizes='16x16', href='img/favicons/favicon-16x16.png')
+        link(rel='manifest', href='img/favicons/manifest.json')
+        link(rel='mask-icon', href='img/favicons/safari-pinned-tab.svg', color='#ed9935')
+        meta(name='apple-mobile-web-app-title',content='Unilot')
+        meta(name='application-name',content='Unilot')
+        meta(name='theme-color', content='#ffffff')
+    body
+        header.header
+            .container
+                .row.middle-xs
+                    .col-md-2.col-sm-12.col-xs-6.start-md.center-xs
+                        .header__logo
+                            .top-line-anchor
+                                #sticky.sticky-element
+                                    .sticky-anchor
+                                    .sticky-content
+                                        .menu-open
+                                            a#btn(href='#menu')
+                                                span
+                            a(href="#")
+                                img(src="img/logo-header.svg", alt="")
+                    .col-md-6
+                        ul.flex.around-xs#link
+                            li
+                                a(href="#link1") What is Unilot
+                            li
+                                a(href="#link2") White Paper
+                            li
+                                a(href="faq.html") FAQ
+                            li
+                                a(href="#") Upcoming Events
+                    .col-md-4.col-sm-12.col-xs-6
+                        .header__left
+                            .row
+                                .col-md-4
+                                    .header__left__lng
+                                        include lng-menu
+                                .col-md-8.col-xs-12.start-md.center-xs
+                                    .header__left__btn
+                                        a(href="#").btn Contribute Now
+                                        a(href="#").btn.none Contribute
+            #alert.alert
+                p The Ethereum Network might be experiencing some delays and slow response due to high volume of transactions. Please, be patient.
+                p
+                    a(href="#" onclick="hideAlert()") &times;
+
+        .sentence__social
+            p Contact Us
+            .sentence__social__block
+                a(href="#")
+                    i.icon-github
+                a(href="")
+                    i.icon-telegram
+                a(href="")
+                    i.icon-medium
+                a(href="")
+                    i.icon-reddit
+                a(href="")
+                    i.icon-twitter
+        #menu.slideout-menu.slideout-menu-right
+            .menu-close
+                span
+            .row
+                .col-xs-12#link-1
+                    ul
+                        if isWhitePaper
+                            include nav-wp
+                        else if isTerms
+                            include nav-terms
+                        else if isBounty
+                            include nav-bounty
+                        else if isAffiliate
+                            include nav-affiliate
+                        else
+                            include nav-landing
+                        li
+                            include lng-menu
+                    .unilot
+                        .row
+                            .col-xs-5
+                                img(src="img/logo.svg", alt="")
+                                p Скачайте приложение Unilot App и будьте всегда в курсе новых лотерей
+                                a(href="#") App Store
+                                    img(src="img/apple.svg", alt="")
+                                a(href="#") Google Play
+                                    img(src="img/google-play.svg", alt="")
+                            .col-xs-7
+                                img(src="img/sentence.png", alt="")
+                    .social
+                        a(href="{% github_organization %}" target="_blank")
+                            i.icon-github
+                        a(href="{% telegram_channel %}" target="_blank")
+                            i.icon-telegram
+                        a(href="{% medium_blog %}" target="_blank")
+                            i.icon-medium
+                        a(href="{% reddit_url %}" target="_blank")
+                            i.icon-reddit
+                        a(href="{% twitter_channel %}" target="_blank")
+                            i.icon-twitter
+        #panel.slideout-panel.slideout-panel-right
 
 
-			
-			block content
-			footer.footer
-				.container
-					if !isWhitePaper
-						.row
-							.col-xs-12
-								.heading
-									h2 Contact Us
-									span Contact
-								form.form
-									.row
-										.col-sm-4.col-xs-12
-											p NAME
-											input(type="text" name="name")
-										.col-sm-4.col-xs-12
-											p EMAIL
-											input(type="email" name="email")
-										.col-sm-4.col-xs-12
-											p COMMENT
-											textarea(name="comment")
-								.row.middle-xs
-									.col-md-4.col-sm-5.col-sm-offset-5.col-xs-12.col-md-offset-6.end-xs
-										.g-recaptcha(data-sitekey="6LcJyDwUAAAAAOHyF7J80mQFTYwXDLusskM8b-_d", data-size='invisible')
-									.col-sm-2.center-xs.col-xs-12
-										a(href="#").btn Join
-						.footer__top
-							include networks
-					.footer__bottom
-						.row.middle-md
-							.footer__logo.col-md-3.center-md.col-sm-6.center-sm.col-xs-12.center-xs.center-lg
-								img(src="img/logo.svg", alt="")
-								p Unilot&reg; 2017 All Rights Reserved
-							.ethereum-logo.col-md-3.center-md.col-sm-6.center-sm.col-xs-12.center-xs.center-lg
-								a(href='https://www.ethereum.org', target='_blank')
-									img(src="img/ethereum-logo.png", alt="Ethereum")
-							.footer__nav.col-md-6.end-md.col-sm-12.center-sm.col-xs-12.center-xs.end-lg
-								ul
-									li
-										a(href='#') Terms and Conditions
-									li
-										a(href='#') Affiliate Program
-									li
-										a(href='#') Bounty Program
-									li
-										a(href='mailto:info@unilot.io') info@unilot.io
 
-		//script(src='https://www.google.com/recaptcha/api.js')
-		script(src="js/main.js")
-		block script
+            block content
+            footer.footer
+                .container
+                    if !isWhitePaper
+                        .row
+                            .col-xs-12
+                                .heading
+                                    h2 Contact Us
+                                    span Contact
+                                form.form.has-overlay
+                                    include overlay
+                                    .row
+                                        .col-sm-4.col-xs-12
+                                            p NAME
+                                            input(type="text" name="name")
+                                        .col-sm-4.col-xs-12
+                                            p EMAIL
+                                            input(type="email" name="email")
+                                        .col-sm-4.col-xs-12
+                                            p COMMENT
+                                            textarea(name="comment")
+                                    .row.middle-xs
+                                        .col-md-4.col-sm-5.col-sm-offset-5.col-xs-12.col-md-offset-6.end-xs
+                                            .g-recaptcha(data-sitekey="6LcJyDwUAAAAAOHyF7J80mQFTYwXDLusskM8b-_d", data-size='invisible')
+                                        .col-sm-2.center-xs.col-xs-12
+                                            a(href="#").btn Join
+                        .footer__top
+                            include networks
+                    .footer__bottom
+                        .row.middle-md
+                            .footer__logo.col-md-3.center-md.col-sm-6.center-sm.col-xs-12.center-xs.center-lg
+                                img(src="img/logo.svg", alt="")
+                                p Unilot&reg; 2017 All Rights Reserved
+                            .ethereum-logo.col-md-3.center-md.col-sm-6.center-sm.col-xs-12.center-xs.center-lg
+                                a(href='https://www.ethereum.org', target='_blank')
+                                    img(src="img/ethereum-logo.png", alt="Ethereum")
+                            .footer__nav.col-md-6.end-md.col-sm-12.center-sm.col-xs-12.center-xs.end-lg
+                                ul
+                                    li
+                                        a(href='#') Terms and Conditions
+                                    li
+                                        a(href='#') Affiliate Program
+                                    li
+                                        a(href='#') Bounty Program
+                                    li
+                                        a(href='mailto:info@unilot.io') info@unilot.io
+
+        //script(src='https://www.google.com/recaptcha/api.js')
+        script(src="js/main.js")
+        block script

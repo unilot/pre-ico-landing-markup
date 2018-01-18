@@ -46,13 +46,16 @@ gulp.task('pug', function buildHTML() {
 
 
 gulp.task('sass', function () {
-  return gulp.src('./assets/**/*.sass')
+  return gulp.src([
+      './assets/css/fonts.sass',
+      './assets/css/styles.sass'
+  ])
     .pipe(sass({
       includePaths: require('node-bourbon').includePaths,
       includePaths: require('node-neat').includePaths
     }).on('error', sass.logError))
     .pipe(csscomb())
-    .pipe(gulp.dest('./docs/'))
+    .pipe(gulp.dest('./docs/css'))
     .pipe(connect.reload());
 });
 
