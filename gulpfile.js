@@ -18,6 +18,7 @@ var jsOrderedList = [
     assetsDir + '/js/vendor/slideout.js',
     assetsDir + '/js/vendor/jquery.rollingslider.js',
     assetsDir + '/js/vendor/jquery.plugin.min.js',
+    assetsDir + '/js/vendor/exit-intent-popup.min.js',
     nodeModulesDir + '/moment/min/moment.min.js',
     nodeModulesDir + '/moment-timezone/builds/moment-timezone-with-data.min.js',
     nodeModulesDir + '/jquery-countdown/dist/jquery.countdown.js',

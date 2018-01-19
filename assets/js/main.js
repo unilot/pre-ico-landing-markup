@@ -175,4 +175,11 @@ var parallaxInstance = new Parallax(scene);
 var scene = $('.scene2').get(0);
 var parallaxInstance = new Parallax(scene);
 
+bioEp.init({
+    delay: 3,
+    cookieExp: 0,
+    width: 800,
+    height: 600
+});
+
 });

@@ -1,3 +1,32 @@
+.form
+  input
+    width: 95%
+    border: none
+    border-bottom: 2px solid #999999
+    outline: none
+    background: none
+    color: #999999
+    transition: all 0.3s
+    padding: 10px 0
+    margin-bottom: 25px
+    @media(max-width: 767px)
+      width: 100%
+    &:focus
+      border-bottom: 2px solid #623be9
+  textarea
+    width: 100%
+    border: none
+    border-bottom: 2px solid #999999
+    outline: none
+    background: none
+    color: #999999
+    transition: all 0.3s
+    padding: 10px 0
+    margin-bottom: 25px
+    height: 18px
+    &:focus
+      border-bottom: 2px solid #623be9
+
 .form-group
   &.has-error
     &.has-danger

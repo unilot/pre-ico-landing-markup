@@ -277,5 +277,7 @@
 
     var $forms = $('form.js-generic-form');
 
+    console.log($forms.length);
+
     onlineFormProcessor($forms);
 })();

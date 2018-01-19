@@ -159,6 +159,36 @@ html(lang="ru")
                                     li
                                         a(href='mailto:info@unilot.io') info@unilot.io
 
+        #bio_ep
+            #bio_ep_close Close
+            .container
+                .row
+                    .col-md-6.col-sm-12.col-xs-12
+                    .col-md-6.col-sm-12.col-xs-12
+                        .has-overlay
+                            form.form.js-generic-form(method="post", action="/subscribe.js",
+                            data-success-message="Success")
+                                include overlay
+                                div
+                                    .alert.js-form-alert.hidden.text-center
+                                .form-group
+                                    label(for="exitPopupName") Yout Name
+                                    input#exitPopupName(type='text', name='name', required=true,
+                                    placeholder="Your Name", data-minlength="3")
+                                    .help-block.with-errors
+                                .form-group
+                                    label(for="exitPopupEmail") Email
+                                    input#exitPopupEmail(type='email', name='email', required=true,
+                                    placeholder="Email")
+                                    .help-block.with-errors
+                                .form-group
+                                    label(for="exitPopupPhone") Phone
+                                    input#exitPopupPhone(type='number', name='phone', required=true,
+                                    placeholder="Phone (123123123)", data-error="Phone format is: 123123123",
+                                    data-minlength="12")
+                                    .help-block.with-errors
+                                .form-control
+                                    button.btn(type="submit") Submit
         //script(src='https://www.google.com/recaptcha/api.js')
         script(src="js/main.js")
         block script
