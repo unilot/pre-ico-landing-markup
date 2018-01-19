@@ -23,6 +23,9 @@ var jsOrderedList = [
     nodeModulesDir + '/jquery-countdown/dist/jquery.countdown.js',
     nodeModulesDir + '/parallax-js/dist/parallax.min.js',
     nodeModulesDir + '/swiper/dist/js/swiper.min.js',
+    nodeModulesDir + '/bootstrap-validator/dist/validator.min.js',
+    nodeModulesDir + '/js-cookie/src/js.cookie.js',
+    assetsDir + '/js/form-validation.js',
     assetsDir + '/js/main.js'
 ];
 var cssOrderedList = [

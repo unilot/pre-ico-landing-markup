@@ -1,0 +1,33 @@
+.form-group
+  &.has-error
+    &.has-danger
+      color: $red
+      *
+        color: $red
+      input
+        border-bottom: 2px solid $red
+  label
+    color: $gray-label
+    font-weight: 400
+    text-transform: uppercase
+  .help-block
+    color: $gray
+    font-size: 0.8em
+
+.alert
+  display: block
+  background: none
+  padding: 0.5em
+  margin-bottom: 0.5em
+  width: 100%
+
+  &.alert-danger
+    color: $red
+  &.alert-warning
+    color: $chart-yellow
+  &.alert-success
+    color: $chart-green
+
+button
+  border: none
+  padding: 1em

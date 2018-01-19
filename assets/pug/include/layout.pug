@@ -55,11 +55,6 @@ html(lang="ru")
                                     .header__left__btn
                                         a(href="#").btn Contribute Now
                                         a(href="#").btn.none Contribute
-            #alert.alert
-                p The Ethereum Network might be experiencing some delays and slow response due to high volume of transactions. Please, be patient.
-                p
-                    a(href="#" onclick="hideAlert()") &times;
-
         .sentence__social
             p Contact Us
             .sentence__social__block
@@ -126,23 +121,23 @@ html(lang="ru")
                                 .heading
                                     h2 Contact Us
                                     span Contact
-                                form.form.has-overlay
+                                form.form.has-overlay.js-generic-form(method="post", action="/subscribe.js",
+                                data-success-message="Success")
                                     include overlay
                                     .row
                                         .col-sm-4.col-xs-12
-                                            p NAME
-                                            input(type="text" name="name")
+                                            .alert.js-form-alert.hidden.text-center
+                                    .row
                                         .col-sm-4.col-xs-12
-                                            p EMAIL
-                                            input(type="email" name="email")
-                                        .col-sm-4.col-xs-12
-                                            p COMMENT
-                                            textarea(name="comment")
+                                            .form-group
+                                                label(for="contactUsEmail") EMAIL
+                                                input#contactUsEmail(type="email", name="email", required=true)
+                                                .help-block.with-errors
                                     .row.middle-xs
                                         .col-md-4.col-sm-5.col-sm-offset-5.col-xs-12.col-md-offset-6.end-xs
                                             .g-recaptcha(data-sitekey="6LcJyDwUAAAAAOHyF7J80mQFTYwXDLusskM8b-_d", data-size='invisible')
                                         .col-sm-2.center-xs.col-xs-12
-                                            a(href="#").btn Join
+                                            button.btn(role="submit") Join
                         .footer__top
                             include networks
                     .footer__bottom
