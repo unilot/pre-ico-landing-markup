@@ -1,75 +1,53 @@
-(function(){
-    var form2Data = function($form) {
+(function () {
+    var form2Data = function ($form) {
         var result = {};
 
-        $.map($form.serializeArray(), function(n, i) {
+        $.map($form.serializeArray(), function (n, i) {
             result[n['name']] = n['value'];
         });
 
         return result;
     };
 
-    var onlineFormProcessor = function($forms, formSettings) {
-        var showAlertMessage = function($form, type, message) {
-            var $alert = $('.js-form-alert', $form);
-
-            $alert.removeClass('hidden');
-
-            if ( type !== 'success' ) $alert.removeClass('alert-success');
-            if ( type !== 'warning' ) $alert.removeClass('alert-warning');
-            if ( type !== 'danger' ) $alert.removeClass('alert-danger');
-
-            $alert.addClass('alert-' + type);
-
-            $alert.text(message);
-        };
-
-        var hideAlert = function($form) {
-            var $alert = $('.js-form-alert', $form);
-
-            $alert.removeClass('alert-success');
-            $alert.removeClass('alert-warning');
-            $alert.removeClass('alert-danger');
-            $alert.addClass('hidden');
-            $alert.text('');
-        };
-
+    var onlineFormProcessor = function ($forms, formSettings) {
+        var _formProcessor = this;
         var defaultSettings = {
-            beforeSend: function($form, jqXHR, settings) {
-                hideAlert($form);
+            beforeSend: function ($form, jqXHR, settings) {
+                this.hideAlert($form);
             },
-            fail: function($form, jqXHR, textStatus, errorThrown) {
+            fail: function ($form, jqXHR, textStatus, errorThrown) {
                 var message = jqXHR.responseText;
 
                 try {
                     message = JSON.parse(jqXHR.responseText);
 
-                    if (message.hasOwnProperty('detail') ) {
+                    if (message.hasOwnProperty('detail')) {
                         message = message.detail;
                     }
 
-                    if ( jqXHR.status === 400 ) {
+                    if (jqXHR.status === 400) {
                         return true;
                     }
-                } catch (e) {/*Do nothing*/}
+                } catch (e) {/*Do nothing*/
+                }
 
 
-                if ( message && message.length > 384 ) {
+                if (message && message.length > 384) {
                     message = message.substr(0, 384) + '...';
                 }
 
-                showAlertMessage($form, 'danger', message);
+                this.showAlertMessage($form, 'danger', message);
 
                 return true;
             },
-            valid: function($form) {
+            valid: function ($form) {
                 if ($form.data('url')) {
                     window.location.replace($form.data('url'))
                 } else {
-                    showAlertMessage($form, 'success', $form.data('success-message'));
+                    _self.showAlertMessage($form, 'success', $form.data('success-message'));
                 }
             },
-            badRequest: function($form, jqXHR, textStatus, errorThrown) {
+            badRequest: function ($form, jqXHR, textStatus, errorThrown) {
                 //Do nothing
             }
         };
@@ -78,26 +56,26 @@
 
         $forms.validator({
             custom: {
-                wallet: function($input) {
-                    if ( $input.val().length > 0 && !(new Web3()).isAddress($input.val()) ) {
+                wallet: function ($input) {
+                    if ($input.val().length > 0 && !(new Web3()).isAddress($input.val())) {
                         var error = config.messages.errors.validation.invalidWallet;
 
                         if ($input.data('wallet-error')) {
                             error = $input.data('wallet-error');
-                        } else if ( $input.data('error') ) {
+                        } else if ($input.data('error')) {
                             error = $input.data('error');
                         }
 
                         return error;
                     }
                 },
-                online: function($input) {
+                online: function ($input) {
                     var url = $input.data('online');
                     var $form = $input.closest('form');
                     var validator = $form.data('bs.validator');
                     var data = {};
 
-                    if ( $input.val().trim().length === 0 ) {
+                    if ($input.val().trim().length === 0) {
                         return false;
                     }
 
@@ -161,7 +139,7 @@
                         });
                     }
                 },
-                phone: function($input) {
+                phone: function ($input) {
                     var phoneUtil = libphonenumber.PhoneNumberUtil.getInstance();
                     var $form = $input.closest('form');
                     var validator = $form.data('bs.validator');
@@ -169,7 +147,7 @@
                     try {
                         var phone = phoneUtil.parse($input.val());
 
-                        if ( !phoneUtil.isValidNumber(phone) ) {
+                        if (!phoneUtil.isValidNumber(phone)) {
                             throw new Error();
                         }
 
@@ -178,8 +156,8 @@
                     }
                 }
             }
-        }).on('submit', function(event) {
-            if ( event.isDefaultPrevented() ) {
+        }).on('submit', function (event) {
+            if (event.isDefaultPrevented()) {
                 return false;
             }
 
@@ -189,15 +167,15 @@
             var $overlayedBlock = null;
             var $overlay = null;
 
-            if ( ( $overlayedBlock = $form.hasClass('has-overlay') ) ) {
+            if (( $overlayedBlock = $form.hasClass('has-overlay') )) {
                 hasOverlay = true;
-            } else if ( ( $overlayedBlock = $form.closest('.has-overlay') ).length > 0 ) {
+            } else if (( $overlayedBlock = $form.closest('.has-overlay') ).length > 0) {
                 hasOverlay = true;
             }
 
             $overlay = $('.overlay', $overlayedBlock);
 
-            if ( hasOverlay ) {
+            if (hasOverlay) {
                 $overlay.removeClass('hidden');
             }
 
@@ -214,7 +192,7 @@
                 headers: {
                     'X-CSRFToken': Cookies.get('csrftoken')
                 },
-                success: function() {
+                success: function () {
                     $.ajax({
                         url: $form.prop('action'),
                         dataType: 'json',
@@ -230,9 +208,9 @@
                             403: function (jqXHR, testStatus, errorThrown) {
                                 window.location.reload();
                             },
-                            400: function(jqXHR, textStatus, errorThrown) {
+                            400: function (jqXHR, textStatus, errorThrown) {
                                 try {
-                                    $.each(JSON.parse(jqXHR.responseText), function(fieldName, errors) {
+                                    $.each(JSON.parse(jqXHR.responseText), function (fieldName, errors) {
                                         var $input = $('[name="' + fieldName + '"]', $form);
 
                                         $input.data('bs.validator.errors', errors);
@@ -241,33 +219,33 @@
 
                                     formFinalSettings.badRequest($form, jqXHR, textStatus, errorThrown);
                                 } catch (e) {
-                                    formFinalSettings.fail($form, jqXHR, textStatus, errorThrown);
+                                    formFinalSettings.fail.call(_formProcessor, $form, jqXHR, textStatus, errorThrown);
                                 }
 
                             }
                         },
-                        error: function(jqXHR, textStatus, errorThrown) {
-                            formFinalSettings.fail($form, jqXHR, textStatus, errorThrown);
+                        error: function (jqXHR, textStatus, errorThrown) {
+                            formFinalSettings.fail.call(_formProcessor, $form, jqXHR, textStatus, errorThrown);
                         },
-                        complete: function() {
+                        complete: function () {
                             if (hasOverlay) {
                                 $overlay.addClass('hidden');
                             }
                         },
                         success: function () {
-                            formFinalSettings.valid($form);
+                            formFinalSettings.valid.call(_formProcessor, $form);
                         }
                     });
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
-                    if ( hasOverlay ) {
+                    if (hasOverlay) {
                         $overlay.addClass('hidden');
                     }
 
-                    formFinalSettings.fail($form, jqXHR, textStatus, errorThrown);
+                    formFinalSettings.fail.call(_formProcessor, $form, jqXHR, textStatus, errorThrown);
                 },
-                beforeSend: function(jqXHR, settings) {
-                    formFinalSettings.beforeSend($form, jqXHR, settings)
+                beforeSend: function (jqXHR, settings) {
+                    formFinalSettings.beforeSend.call(_formProcessor, $form, jqXHR, settings)
                 }
             });
 
@@ -275,9 +253,41 @@
         });
     };
 
+    onlineFormProcessor.prototype.showAlertMessage = function ($form, type, message) {
+        var $alert = $('.js-form-alert', $form);
+
+        $alert.removeClass('hidden');
+
+        if (type !== 'success') $alert.removeClass('alert-success');
+        if (type !== 'warning') $alert.removeClass('alert-warning');
+        if (type !== 'danger') $alert.removeClass('alert-danger');
+
+        $alert.addClass('alert-' + type);
+
+        $alert.text(message);
+    };
+
+    onlineFormProcessor.prototype.hideAlert = function ($form) {
+        var $alert = $('.js-form-alert', $form);
+
+        $alert.removeClass('alert-success');
+        $alert.removeClass('alert-warning');
+        $alert.removeClass('alert-danger');
+        $alert.addClass('hidden');
+        $alert.text('');
+    };
+
     var $forms = $('form.js-generic-form');
+    var $exitIntentForm = $('#bio_ep form');
 
-    console.log($forms.length);
+    new onlineFormProcessor($forms);
+    new onlineFormProcessor($exitIntentForm, {
+        valid: function ($form) {
+            this.showAlertMessage($form, 'success', $form.data('success-message'));
 
-    onlineFormProcessor($forms);
+            setTimeout(function () {
+                bioEp.hidePopup()
+            }, 3000);
+        }
+    });
 })();
