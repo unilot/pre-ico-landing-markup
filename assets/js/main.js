@@ -129,7 +129,9 @@ slideout.on('close', function() {
   $('body').removeClass('on');
 });
 
-
+$('#menu ul li a').on('click', function (event) {
+    slideout.close();
+});
 
 // Якорь
  $(document).ready(function(){
@@ -174,8 +176,3 @@ var scene = $('.scene2').get(0);
 var parallaxInstance = new Parallax(scene);
 
 });
-
-function hideAlert() {
-  var alert = document.getElementById('alert');
-  alert.style.display = 'none';
-}
