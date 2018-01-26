@@ -1,33 +1,10 @@
 .form
-  input
-    width: 95%
-    border: none
-    border-bottom: 2px solid #999999
-    outline: none
-    background: none
-    color: #999999
-    transition: all 0.3s
-    padding: 10px 0
-    margin-bottom: 25px
-    @media(max-width: 767px)
-      width: 100%
-    &:focus
-      border-bottom: 2px solid #623be9
-  textarea
-    width: 100%
-    border: none
-    border-bottom: 2px solid #999999
-    outline: none
-    background: none
-    color: #999999
-    transition: all 0.3s
-    padding: 10px 0
-    margin-bottom: 25px
-    height: 18px
-    &:focus
-      border-bottom: 2px solid #623be9
+  margin: 1em
 
 .form-group
+  position: relative
+  margin-bottom: 1em
+
   &.has-error
     &.has-danger
       color: $red
@@ -35,13 +12,109 @@
         color: $red
       input
         border-bottom: 2px solid $red
-  label
-    color: $gray-label
-    font-weight: 400
-    text-transform: uppercase
   .help-block
     color: $gray
     font-size: 0.8em
+  input
+    &[type=text], &[type=email], &[type=tel], &[type=number], &[type=url]
+      display: block
+      width: 95%
+      border: none
+      border-bottom: 2px solid #999999
+      outline: none
+      background: none
+      color: #999999
+      transition: all 0.3s
+      padding: 10px 0
+      margin-bottom: 25px
+      &.with-checkbox
+        margin-bottom: 0.5em
+      @media(max-width: 767px)
+        width: 100%
+      &:focus
+        border-bottom: 2px solid $form-focus-blue
+        ~ label
+          color: $form-focus-blue
+      &:focus, &:valid, &.in-use
+        outline: none
+        ~ label
+          font-size: 0.8em
+          top: -1em
+  //border-bottom: 2px solid #623be9
+
+  label
+    color: $gray-label
+    font-weight: 400
+    font-size: 0.9em
+    position: absolute
+    top: 0.8em
+    transition: 0.2s ease all
+    .required
+      &:before
+        content: '*'
+        color: $red
+        font-size: 1.2em
+  /*Custom checkbox*/
+  .checkbox
+    $checkbox-size: 1.2em
+    $checkbox-border-size: 1px
+    height: 2em
+    label
+      display: block
+      position: relative
+      top: 0
+      cursor: pointer
+      -webkit-user-select: none
+      -moz-user-select: none
+      -ms-user-select: none
+      user-select: none
+      padding-left: 1.8em
+      margin-bottom: 1em
+      font-size: 0.8em
+      color: $gray-label
+      line-height: $checkbox-size + 0.2em
+      height: $checkbox-size + 0.2em
+    //border: 1px solid $gray
+    //border-radius: 1em
+    input
+      position: absolute
+      opacity: 0
+      cursor: pointer
+    .checkmark
+      position: absolute
+      top: 0
+      left: 0
+      height: $checkbox-size
+      width: $checkbox-size
+      background-color: $white
+      border: 1px solid $gray
+      border-radius: 0.3em
+      &:after
+        content: ""
+        position: absolute
+        display: none
+        border: solid $form-focus-blue
+        border-width: 0 3px 3px 0
+        -webkit-transform: rotate(45deg)
+        -moz-transform: rotate(45deg)
+        -ms-transform: rotate(45deg)
+        -o-transform: rotate(45deg)
+        transform: rotate(45deg)
+        width: 0.3em
+        height: 0.7em
+        top: 0
+        left: 0.4em
+    &:hover input ~ .checkmark
+      background-color: $white
+    input:checked ~ .checkmark
+      background-color: $white
+      &:after
+        display: block
+
+.footer
+  .form-group
+    label
+      text-transform: uppercase
 
 .alert
   display: block
