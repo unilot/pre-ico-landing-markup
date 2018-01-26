@@ -1,5 +1,5 @@
 #bio_ep
-    #bio_ep_close Close
+    #bio_ep_close No, thanks #[span.cross]
     .container
         section.wait
             .row
@@ -29,14 +29,15 @@
                                 label(for="exitPopupName") Yout Name #[span.required]
                                 .help-block.with-errors
                             .form-group
-                                input#exitPopupEmail.with-checkbox(type='email', name='email', required=true)
+                                input#exitPopupEmail(type='email', name='email', required=true)
                                 label(for="exitPopupEmail") AppleID or Email #[span.required]
+                                .help-block.with-errors
+                            .form-group
                                 .checkbox
                                     label
                                         = 'Exclusive updates, announcements and more'
                                         input(type="checkbox", name="subscribe", checked=true)
                                         .checkmark
-                                .help-block.with-errors
                             .form-group
                                 input#exitPopupPhone(type='number', name='phone', required=true,
                                 data-error="Phone format is: 123123123", data-minlength="12")
@@ -59,4 +60,7 @@
                                                 span.checkmark
                             .form-control
                                 button.btn(type="submit") Enter to Win
+            .row
+                .col-md-8.col-md-offset-2.col-sm-12.col-xs-12.text-center
+                    p.announce Winners will be announced on March 5#[sup eth], 2018
     .fancy-line

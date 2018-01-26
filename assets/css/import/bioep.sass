@@ -25,7 +25,6 @@
       input:not([type=checkbox])
         ~ label
           font-weight: 400
-          color: $black
     button.btn
       display: block
       margin: 0 auto
@@ -35,3 +34,46 @@
     background-image: linear-gradient(to right, $lilac, $purple)
     position: absolute
     bottom: 0
+
+  .announce
+    font-weight: 400
+    font-size: 0.8em
+
+  #bio_ep_close
+    position: absolute
+    bottom: 2em
+    right: 1em
+    font-weight: 300
+    font-size: 1em
+    cursor: pointer
+    padding-right: 26px
+    height: 1.2em
+    .cross
+      position: relative
+      background-color: transparent
+      margin-left: 0.5em
+      &:before, &:after
+        position: absolute
+        bottom: 17px
+        left: 0
+        width: 28px
+        height: 1px
+        content: ""
+        transition: all .3s
+        background-color: $black
+        backface-visibility: hidden
+      &:before
+        -webkit-transform: rotate(45deg) translate(6px, 5px)
+        -moz-transform: rotate(45deg) translate(6px, 5px)
+        -ms-transform: rotate(45deg) translate(6px, 5px)
+        -o-transform: rotate(45deg) translate(6px, 5px)
+        transform: rotate(45deg) translate(6px, 5px)
+      &:after
+        top: 20px
+        -webkit-transform: rotate(-45deg) translate(9px, -8px)
+        -moz-transform: rotate(-45deg) translate(9px, -8px)
+        -ms-transform: rotate(-45deg) translate(9px, -8px)
+        -o-transform: rotate(-45deg) translate(9px, -8px)
+        transform: rotate(-45deg) translate(9px, -8px)
+
+

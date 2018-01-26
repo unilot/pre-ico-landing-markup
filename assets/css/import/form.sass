@@ -8,10 +8,10 @@
   &.has-error
     &.has-danger
       color: $red
-      *
-        color: $red
       input
         border-bottom: 2px solid $red
+      .help-block
+        color: $red
   .help-block
     color: $gray
     font-size: 0.8em
@@ -23,12 +23,10 @@
       border-bottom: 2px solid #999999
       outline: none
       background: none
-      color: #999999
+      color: $black
       transition: all 0.3s
       padding: 10px 0
-      margin-bottom: 25px
-      &.with-checkbox
-        margin-bottom: 0.5em
+      margin-bottom: 0.5em
       @media(max-width: 767px)
         width: 100%
       &:focus

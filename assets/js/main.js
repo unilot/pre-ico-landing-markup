@@ -165,6 +165,6 @@
         delay: 3,
         cookieExp: 0,
         width: 600,
-        height: 650
+        height: 700
     });
 })();
