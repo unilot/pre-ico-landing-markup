@@ -26,7 +26,7 @@
                                 data-minlength="3")
                                 span.highlight
                                 span.bar
-                                label(for="exitPopupName") Yout Name #[span.required]
+                                label(for="exitPopupName") Your Name #[span.required]
                                 .help-block.with-errors
                             .form-group
                                 input#exitPopupEmail(type='email', name='email', required=true)
@@ -39,16 +39,16 @@
                                         input(type="checkbox", name="subscribe", checked=true)
                                         .checkmark
                             .form-group
-                                input#exitPopupPhone(type='number', name='phone', required=true,
-                                data-error="Phone format is: 123123123", data-minlength="12")
-                                label(for="exitPopupPhone") Phone (123123123) #[span.required]
+                                input#exitPopupPhone(type='tel', name='phone', required=true, data-phone="true",
+                                data-error="Invalid phone number")
+                                label(for="exitPopupPhone") Phone (+1(234)567-89-10) #[span.required]
                                 .help-block.with-errors
                             .row
                                 .col-md-3.col-sm-6.col-xs-12
                                     .form-group
                                         .checkbox
                                             label
-                                                ='Andoid'
+                                                ='Android'
                                                 input(type="checkbox", name="is_android")
                                                 span.checkmark
                                 .col-md-3.col-sm-6.col-xs-12

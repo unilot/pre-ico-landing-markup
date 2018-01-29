@@ -44,7 +44,7 @@
                 if ($form.data('url')) {
                     window.location.replace($form.data('url'))
                 } else {
-                    _self.showAlertMessage($form, 'success', $form.data('success-message'));
+                    this.showAlertMessage($form, 'success', $form.data('success-message'));
                 }
             },
             badRequest: function ($form, jqXHR, textStatus, errorThrown) {
@@ -145,14 +145,14 @@
                     var validator = $form.data('bs.validator');
 
                     try {
-                        var phone = phoneUtil.parse($input.val());
+                        var phone = phoneUtil.parse('+' + $input.val().replace( /^\D+/g, ''));
 
                         if (!phoneUtil.isValidNumber(phone)) {
                             throw new Error();
                         }
 
                     } catch (exception) {
-                        return config.messages.errors.validation.invalidPhone;
+                        return $input.data('error');
                     }
                 }
             }
@@ -287,7 +287,7 @@
 
             setTimeout(function () {
                 bioEp.hidePopup()
-            }, 3000);
+            }, 5000);
         }
     });
 })();

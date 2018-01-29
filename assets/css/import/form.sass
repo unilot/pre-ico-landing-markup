@@ -1,5 +1,7 @@
 .form
   margin: 1em
+  button
+    cursor: pointer
 
 .form-group
   position: relative
@@ -10,7 +12,7 @@
       color: $red
       input
         border-bottom: 2px solid $red
-      .help-block
+      .help-block, .checkbox label
         color: $red
   .help-block
     color: $gray
@@ -56,7 +58,7 @@
   .checkbox
     $checkbox-size: 1.2em
     $checkbox-border-size: 1px
-    height: 2em
+    height: 1.4em
     label
       display: block
       position: relative

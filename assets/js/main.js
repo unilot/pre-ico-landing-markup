@@ -160,11 +160,4 @@
     });
 
     $input.blur(detectInUse);
-
-    bioEp.init({
-        delay: 3,
-        cookieExp: 0,
-        width: 600,
-        height: 700
-    });
 })();
