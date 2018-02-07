@@ -28,7 +28,8 @@ var jsOrderedList = [
     nodeModulesDir + '/js-cookie/src/js.cookie.js',
     nodeModulesDir + '/google-libphonenumber/dist/libphonenumber.js',
     assetsDir + '/js/form-validation.js',
-    assetsDir + '/js/main.js'
+    assetsDir + '/js/main.js',
+    assetsDir + '/js/vendor/bootstrap.min.js'
 ];
 var cssOrderedList = [
         assetsDir + '/css/vendor/flexboxgrid.min.css',
