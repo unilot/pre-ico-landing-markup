@@ -1,0 +1,66 @@
+#bio_ep
+    #bio_ep_close No, thanks #[span.cross]
+    .container
+        section.wait
+            .row
+                .col-md-10.col-md-offset-1.col-sm-12.col-xs-12.text-center
+                    p Wait a second
+        section
+            .row
+                .col-md-10.col-md-offset-1.col-sm-12.col-xs-12.text-center
+                    h2.message Test the app, participate in any drawings of the lottery, win big!
+        section
+            .row
+                .col-md-8.col-md-offset-2.col-sm-12.col-xs-12.text-center
+                    span.details Take part in any drawing and you automatically participate in drawing for prize of 100,000 UNIT
+        section
+            .row
+                .col-md-8.col-md-offset-2.col-sm-12.col-xs-12
+                    .has-overlay
+                        include overlay
+                        form.form.js-generic-form(method="post", action="/subscribe.js",
+                        data-success-message="Success")
+                            .alert.js-form-alert.hidden.text-center
+                            .form-group
+                                input#exitPopupName(type='text', name='name', required=true,
+                                data-minlength="3")
+                                span.highlight
+                                span.bar
+                                label(for="exitPopupName") Your Name #[span.required]
+                                .help-block.with-errors
+                            .form-group
+                                input#exitPopupEmail(type='email', name='email', required=true)
+                                label(for="exitPopupEmail") AppleID or Email #[span.required]
+                                .help-block.with-errors
+                            .form-group
+                                .checkbox
+                                    label
+                                        = 'Exclusive updates, announcements and more'
+                                        input(type="checkbox", name="subscribe", checked=true)
+                                        .checkmark
+                            .form-group
+                                input#exitPopupPhone(type='tel', name='phone', required=true, data-phone="true",
+                                data-error="Invalid phone number")
+                                label(for="exitPopupPhone") Phone (+1(234)567-89-10) #[span.required]
+                                .help-block.with-errors
+                            .row
+                                .col-md-3.col-sm-6.col-xs-12
+                                    .form-group
+                                        .checkbox
+                                            label
+                                                ='Android'
+                                                input(type="checkbox", name="is_android")
+                                                span.checkmark
+                                .col-md-3.col-sm-6.col-xs-12
+                                    .form-group
+                                        .checkbox
+                                            label
+                                                ='IOS'
+                                                input(type="checkbox", name="is_ios")
+                                                span.checkmark
+                            .form-control
+                                button.btn(type="submit") Enter to Win
+            .row
+                .col-md-8.col-md-offset-2.col-sm-12.col-xs-12.text-center
+                    p.announce Winners will be announced on March 5#[sup eth], 2018
+    .fancy-line

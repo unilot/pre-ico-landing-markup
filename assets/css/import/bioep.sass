@@ -1,0 +1,79 @@
+#bio_ep
+  $bio-ep-border-radius: 2em
+  background-color: #FFFFFF
+  border-radius: $bio-ep-border-radius
+  overflow: hidden
+  p
+    padding: 0 !important
+  .big-amount
+    color: $form-focus-blue
+  section
+    margin-bottom: 1em
+    padding-top: 0 !important
+    &.wait
+      margin-top: 2em
+      p
+        font-size: 1.6em
+    .details
+      font-size: 1em
+      color: $gray-label
+    h2.message
+      font-weight: 400
+      font-size: 2em
+  .form
+    .form-group
+      input:not([type=checkbox])
+        ~ label
+          font-weight: 400
+    button.btn
+      display: block
+      margin: 0 auto
+  .fancy-line
+    width: 100%
+    height: 1em
+    background-image: linear-gradient(to right, $lilac, $purple)
+    position: absolute
+    bottom: 0
+
+  .announce
+    font-weight: 400
+    font-size: 0.8em
+
+  #bio_ep_close
+    position: absolute
+    bottom: 2em
+    right: 1em
+    font-weight: 300
+    font-size: 1em
+    cursor: pointer
+    padding-right: 26px
+    height: 1.2em
+    .cross
+      position: relative
+      background-color: transparent
+      margin-left: 0.5em
+      &:before, &:after
+        position: absolute
+        bottom: 17px
+        left: 0
+        width: 28px
+        height: 1px
+        content: ""
+        transition: all .3s
+        background-color: $black
+        backface-visibility: hidden
+      &:before
+        -webkit-transform: rotate(45deg) translate(6px, 5px)
+        -moz-transform: rotate(45deg) translate(6px, 5px)
+        -ms-transform: rotate(45deg) translate(6px, 5px)
+        -o-transform: rotate(45deg) translate(6px, 5px)
+        transform: rotate(45deg) translate(6px, 5px)
+      &:after
+        top: 20px
+        -webkit-transform: rotate(-45deg) translate(9px, -8px)
+        -moz-transform: rotate(-45deg) translate(9px, -8px)
+        -ms-transform: rotate(-45deg) translate(9px, -8px)
+        -o-transform: rotate(-45deg) translate(9px, -8px)
+        transform: rotate(-45deg) translate(9px, -8px)
+
+
