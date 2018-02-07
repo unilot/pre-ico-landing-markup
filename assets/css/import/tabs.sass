@@ -1,0 +1,100 @@
+$tab-height: 60px
+$wb-border-radius: 15px //white block border radius
+
+.token-details
+  .heading span
+    &::after
+      display: block
+      content: ''
+      width: 190px
+      height: 160px
+      background-image: url('../img/coins.png') !important
+      background-size: cover
+      position: absolute
+      top: 20px
+      right: 125px
+
+.tab-wrapper
+  margin-top: 100px
+  z-index: 5
+
+.nav-tabs
+  display: block
+  box-sizing: border-box
+  height: $tab-height
+
+  @media (max-width: 617px)
+    li:not(.active):not(:hover)
+      a
+        width: 80px
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+
+
+  li
+    float: left
+    position: relative
+
+    a
+      border-radius: $wb-border-radius $wb-border-radius 0 0
+      color: #bcabff
+      font-family: 'GothamProMedium'
+      font-size: 22.4px
+      line-height: $tab-height
+      padding: 0 25px
+      display: block
+
+  .active
+    a
+      background-color: $white
+      color: $black
+
+  li:not(.active):hover
+    a
+      background-color: #dbdde2
+      color: #999
+
+  // cover rounded corner if active or hovered tab is above
+  .active::after,
+  li:hover::after
+    display: block
+    position: absolute
+    width: 100%
+    height: $wb-border-radius
+    background-color: $white
+    content: ''
+    z-index: -1
+
+.tab-content
+  background-color: $white
+  display: block
+  padding: 1em
+  margin-bottom: 85px
+  border-radius: $wb-border-radius
+
+  .table
+    margin: 0
+
+    td
+      font-size: 17px
+      color: #333
+      vertical-align: top
+
+      &:first-child
+        padding-left: 10px // align 1st cell with 1st tab
+        width: 210px  // align 2nd cell with 2nd tab
+
+    p
+      font-size: inherit
+      color: #333
+      padding: 0
+      line-height: 1em
+      margin: 0 0 1em
+
+.tab-pane
+  display: none
+
+.tab-pane.active
+  display: block
+  padding: 20px 0 70px
