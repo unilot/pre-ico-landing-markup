@@ -128,16 +128,14 @@ html(lang="ru")
                                         .col-sm-4.col-xs-12
                                             .alert.js-form-alert.hidden.text-center
                                     .row
-                                        .col-sm-4.col-xs-12
+                                        .col-md-8.col-md-offset-1.col-xs-12
                                             .form-group
-                                                label(for="contactUsEmail") EMAIL
-                                                input#contactUsEmail(type="email", name="email", required=true)
+                                                input#contactUsEmail.in-use(type="email", name="email", required=true, value="alexander.aka.alegz@gmail.com")
+                                                label(for="contactUsEmail") To join our Mailing List, please enter your email address below #[span.required]
+                                                span.bar
                                                 .help-block.with-errors
-                                    .row.middle-xs
-                                        .col-md-4.col-sm-5.col-sm-offset-5.col-xs-12.col-md-offset-6.end-xs
-                                            .g-recaptcha(data-sitekey="6LcJyDwUAAAAAOHyF7J80mQFTYwXDLusskM8b-_d", data-size='invisible')
-                                        .col-sm-2.center-xs.col-xs-12
-                                            button.btn(role="submit") Join
+                                        .col-md-2.col-sm-12.col-xs-12
+                                            button.btn(role="submit") Subscribe
                         .footer__top
                             include networks
                     .footer__bottom
@@ -158,7 +156,8 @@ html(lang="ru")
                                         a(href='#') Bounty Program
                                     li
                                         a(href='mailto:info@unilot.io') info@unilot.io
-
+        include exit-popup
         //script(src='https://www.google.com/recaptcha/api.js')
-        script(src="js/main.js")
+        script(type="application/javascript", src="js/main.js")
+        script(type="application/javascript", src="js/bio-ep.js")
         block script

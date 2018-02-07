@@ -18,6 +18,7 @@ var jsOrderedList = [
     assetsDir + '/js/vendor/slideout.js',
     assetsDir + '/js/vendor/jquery.rollingslider.js',
     assetsDir + '/js/vendor/jquery.plugin.min.js',
+    assetsDir + '/js/vendor/exit-intent-popup.min.js',
     nodeModulesDir + '/moment/min/moment.min.js',
     nodeModulesDir + '/moment-timezone/builds/moment-timezone-with-data.min.js',
     nodeModulesDir + '/jquery-countdown/dist/jquery.countdown.js',
@@ -25,6 +26,7 @@ var jsOrderedList = [
     nodeModulesDir + '/swiper/dist/js/swiper.min.js',
     nodeModulesDir + '/bootstrap-validator/dist/validator.min.js',
     nodeModulesDir + '/js-cookie/src/js.cookie.js',
+    nodeModulesDir + '/google-libphonenumber/dist/libphonenumber.js',
     assetsDir + '/js/form-validation.js',
     assetsDir + '/js/main.js',
     assetsDir + '/js/vendor/bootstrap.min.js'
