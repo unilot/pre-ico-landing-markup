@@ -1,5 +1,6 @@
 @import "color.sass" 
 $slideout-menu-width: 350px
+
 .slideout-menu
 	position: fixed
 	z-index: 8
@@ -10,7 +11,7 @@ $slideout-menu-width: 350px
 	max-width: $slideout-menu-width
 	min-height: 100vh
 	-webkit-overflow-scrolling: touch
-	background: #181a22
+	background: $slideout-menu-bg-color
 	// хром, сафари
 	&::-webkit-scrollbar
 		width: 0
@@ -48,7 +49,7 @@ $slideout-menu-width: 350px
 			position: relative
 			top: 4px
 	.unilot
-		background: #181a22
+		background: $slideout-menu-bg-color
 		width: 100%
 		padding-top: 25px
 		padding-bottom: 60px
@@ -85,7 +86,7 @@ $slideout-menu-width: 350px
 		padding-bottom: 25px
 		width: $slideout-menu-width
 		border-top: 2px solid #2c2e3c
-		background: #181a22
+		background: $slideout-menu-bg-color
 		display: flex
 		justify-content: space-around
 		a
@@ -284,44 +285,3 @@ body.on
 				@media(max-width: 500px)
 					padding: 18px 0
 					width: 100%
-
-// language menu
-.lng
-	display: flex
-	justify-content: space-between
-	align-items: center
-	position: relative
-	height: 49px
-	select
-		width: 100%
-		height: 100%
-		position: absolute
-		top: 0
-		left: 0
-		border: none
-		cursor: pointer
-		opacity: 0
-		filter: alpha(opacity = 0)
-	img
-		height: 1em
-		margin-right: 10px
-		order: 1
-	p
-		font-size: 14px
-		color: $black
-		font-family: "GothamProRegular"
-		margin-right: auto
-		order: 2
-	.icon-arrow_drop_down
-		font-size: 25px
-		order: 3
-
-.slideout-menu-right
-	.lng
-		width: calc(100% - 25px)
-		left: 25px
-		p
-			font-size: 18px
-			color: #cdcdcd
-		.icon-arrow_drop_down
-			color: #cdcdcd

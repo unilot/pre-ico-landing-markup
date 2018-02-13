@@ -96,7 +96,7 @@
         $('body').removeClass('on');
     });
 
-    $('#menu ul li a').on('click', function (event) {
+    $('#menu ul li a:not(.lng-switcher)').on('click', function (event) {
         slideout.close();
     });
 
