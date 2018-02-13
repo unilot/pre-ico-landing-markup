@@ -121,21 +121,6 @@ html(lang="ru")
                                 .heading
                                     h2 Contact Us
                                     span Contact
-                                form.form.has-overlay.js-generic-form(method="post", action="/subscribe.js",
-                                data-success-message="Success")
-                                    include overlay
-                                    .row
-                                        .col-sm-4.col-xs-12
-                                            .alert.js-form-alert.hidden.text-center
-                                    .row
-                                        .col-md-8.col-md-offset-1.col-xs-12
-                                            .form-group
-                                                input#contactUsEmail.in-use(type="email", name="email", required=true, value="alexander.aka.alegz@gmail.com")
-                                                label(for="contactUsEmail") To join our Mailing List, please enter your email address below #[span.required]
-                                                span.bar
-                                                .help-block.with-errors
-                                        .col-md-2.col-sm-12.col-xs-12
-                                            button.btn(role="submit") Subscribe
                         .footer__top
                             include networks
                     .footer__bottom
@@ -156,6 +141,8 @@ html(lang="ru")
                                         a(href='#') Bounty Program
                                     li
                                         a(href='mailto:info@unilot.io') info@unilot.io
+        .floating-footer.hidden-sm
+            include newsletter-form
         include exit-popup
         //script(src='https://www.google.com/recaptcha/api.js')
         script(type="application/javascript", src="js/main.js")
