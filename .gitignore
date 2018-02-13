@@ -3,3 +3,4 @@ node_modules
 docs/css
 docs/js
 docs/*.html
+.sass-lint.yml

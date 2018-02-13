@@ -1,8 +1,18 @@
-form.lng
-    img(src='img/united-kingdom.svg')
-    p ENG
-    i.icon-arrow_drop_down
-    select(name="language")
-        option(value="") Eng
-        option(value="1") Ru
-        option(value="2") Gr
+.lng
+    a#lng-switcher.lng-switcher(role='button', href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+        span.flag 
+            img(src='img/united-kingdom.svg')
+        span ENG
+        span.icon-arrow_drop_down
+
+    ul.dropdown-menu(aria-labelledby='lng-switcher')
+        li.active
+            a(nohref)
+                span.flag
+                    img(src='img/united-kingdom.svg')
+                span English
+        li
+            a(href='#')
+                span.flag
+                    img(src='img/russia.svg')
+                span Русский

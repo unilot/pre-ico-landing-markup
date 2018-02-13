@@ -1,0 +1,97 @@
+$flag-size: 16px
+$dropdown-shadow-color: rgba(0, 0, 0, .26)
+$switcher-height: 49px
+
+// Regular dropdown
+.dropdown-menu
+  display: none
+
+.open
+  .dropdown-menu
+    display: block
+    position: absolute
+    top: 55px
+    left: 0
+    width: 160px
+    padding: 0
+    border-radius: 15px
+    background: $white
+    box-shadow: 0 2px 5px 0 $dropdown-shadow-color
+
+    a
+      display: flex
+      align-items: center
+      padding: 0 14px
+      line-height: 40px
+
+      span
+        display: inline-block
+
+    .active
+      a
+        color: $lilac
+
+.lng
+  .flag
+    height: $flag-size
+    margin-right: .5em
+
+    img
+      display: block
+      width: $flag-size
+      height: $flag-size
+
+  .lng-switcher
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    line-height: $switcher-height
+
+    span
+      color: $black
+      font-family: 'GothamProRegular'
+      font-size: 14px
+
+    .icon-arrow_drop_down
+      font-size: 25px
+
+
+// Dropdown inside slideout menu
+.slideout-menu-right
+  .lng-switcher
+    padding-right: 15px
+    padding-left: 25px
+
+    span
+      color: $slideout-menu-text-color
+      font-size: 18px
+
+    .icon-arrow_drop_down
+      top: 0
+      margin-left: auto
+
+  .open
+    .dropdown-menu
+      position: static
+      width: auto
+      border-radius: 0
+      background: transparent
+
+      li
+        left: 0
+        width: inherit
+        margin: 0
+        padding: 0
+        border: 0
+
+      a
+        padding: 0
+        padding-left: 25px
+
+      a:hover
+        background: lighten($slideout-menu-bg-color, 5%)
+
+      span
+        font-size: 18px
+
