@@ -98,41 +98,7 @@
                                     'X-CSRFToken': Cookies.get('csrftoken')
                                 },
                                 success: function () {
-                                    $.ajax({
-                                        url: url,
-                                        dataType: 'json',
-                                        data: data,
-                                        method: 'POST',
-                                        xhrFields: {
-                                            withCredentials: true
-                                        },
-                                        headers: {
-                                            'X-CSRFToken': Cookies.get('csrftoken')
-                                        },
-                                        statusCode: {
-                                            400: function (jqXHR, textStatus, errorThrown) {
-                                                var errors = $input.data('bs.validator.errors');
-                                                try {
-                                                    var resposneData = JSON.parse(jqXHR.responseText);
-                                                    errors.push(resposneData[$input.attr('name')]);
-                                                } catch (e) {
-                                                    errors.push(jqXHR.responseText || textStatus);
-                                                }
 
-                                                $input.data('bs.validator.errors', errors);
-                                                validator.showErrors($input);
-                                            }
-                                        },
-                                        error: function (jqXHR, textStatus, errorThrown) {
-                                            if (jqXHR.status === 400)
-                                                return true;
-
-                                            var error = config.messages.errors.validation.requestFailed;
-
-                                            $input.data('bs.validator.errors', [error]);
-                                            validator.showErrors($input);
-                                        }
-                                    });
                                 },
                                 error: function (jqXHR, textStatus, errorThrown) {
                                     var error = config.messages.errors.validation.requestFailed;
@@ -186,72 +152,82 @@
                 var data = form2Data($form);
                 event.preventDefault();
 
-                $.ajax({
-                    url: $form.prop('action'),
-                    dataType: 'json',
-                    method: 'OPTIONS',
-                    xhrFields: {
-                        withCredentials: true
-                    },
-                    headers: {
-                        'X-CSRFToken': Cookies.get('csrftoken')
-                    },
-                    success: function () {
-                        $.ajax({
-                            url: $form.prop('action'),
-                            dataType: 'json',
-                            data: data,
-                            method: $form.attr('method'),
-                            xhrFields: {
-                                withCredentials: true
+                var postRequest = function () {
+                    $.ajax({
+                        url: $form.prop('action'),
+                        dataType: 'json',
+                        data: data,
+                        method: $form.attr('method'),
+                        xhrFields: {
+                            withCredentials: true
+                        },
+                        headers: {
+                            'X-CSRFToken': Cookies.get('csrftoken')
+                        },
+                        statusCode: {
+                            403: function (jqXHR, testStatus, errorThrown) {
+                                window.location.reload();
                             },
-                            headers: {
-                                'X-CSRFToken': Cookies.get('csrftoken')
-                            },
-                            statusCode: {
-                                403: function (jqXHR, testStatus, errorThrown) {
-                                    window.location.reload();
-                                },
-                                400: function (jqXHR, textStatus, errorThrown) {
-                                    try {
-                                        $.each(JSON.parse(jqXHR.responseText), function (fieldName, errors) {
-                                            var $input = $('[name="' + fieldName + '"]', $form);
+                            400: function (jqXHR, textStatus, errorThrown) {
+                                try {
+                                    $.each(JSON.parse(jqXHR.responseText), function (fieldName, errors) {
+                                        var $input = $('[name="' + fieldName + '"]', $form);
 
-                                            $input.data('bs.validator.errors', errors);
-                                            $form.data('bs.validator').showErrors($input);
-                                        });
+                                        $input.data('bs.validator.errors', errors);
+                                        $form.data('bs.validator').showErrors($input);
+                                    });
 
-                                        formFinalSettings.badRequest($form, jqXHR, textStatus, errorThrown);
-                                    } catch (e) {
-                                        formFinalSettings.fail.call(_formProcessor, $form, jqXHR, textStatus, errorThrown);
-                                    }
-
+                                    formFinalSettings.badRequest($form, jqXHR, textStatus, errorThrown);
+                                } catch (e) {
+                                    formFinalSettings.fail.call(_formProcessor, $form, jqXHR, textStatus, errorThrown);
                                 }
-                            },
-                            error: function (jqXHR, textStatus, errorThrown) {
-                                formFinalSettings.fail.call(_formProcessor, $form, jqXHR, textStatus, errorThrown);
-                            },
-                            complete: function () {
-                                if (hasOverlay) {
-                                    $overlay.addClass('hidden');
-                                }
-                            },
-                            success: function () {
-                                formFinalSettings.valid.call(_formProcessor, $form);
+
                             }
-                        });
-                    },
-                    error: function (jqXHR, textStatus, errorThrown) {
-                        if (hasOverlay) {
-                            $overlay.addClass('hidden');
+                        },
+                        error: function (jqXHR, textStatus, errorThrown) {
+                            formFinalSettings.fail.call(_formProcessor, $form, jqXHR, textStatus, errorThrown);
+                        },
+                        complete: function () {
+                            if (hasOverlay) {
+                                $overlay.addClass('hidden');
+                            }
+                        },
+                        success: function () {
+                            formFinalSettings.valid.call(_formProcessor, $form);
                         }
+                    });
+                };
 
-                        formFinalSettings.fail.call(_formProcessor, $form, jqXHR, textStatus, errorThrown);
-                    },
-                    beforeSend: function (jqXHR, settings) {
-                        formFinalSettings.beforeSend.call(_formProcessor, $form, jqXHR, settings)
-                    }
-                });
+                console.log($form, $form.hasClass('js-no-option-request'));
+
+                if ($form.hasClass('js-no-option-request')) {
+                    postRequest();
+                } else {
+                    $.ajax({
+                        url: $form.prop('action'),
+                        dataType: 'json',
+                        method: 'OPTIONS',
+                        xhrFields: {
+                            withCredentials: true
+                        },
+                        headers: {
+                            'X-CSRFToken': Cookies.get('csrftoken')
+                        },
+                        success: function () {
+                            postRequest();
+                        },
+                        error: function (jqXHR, textStatus, errorThrown) {
+                            if (hasOverlay) {
+                                $overlay.addClass('hidden');
+                            }
+
+                            formFinalSettings.fail.call(_formProcessor, $form, jqXHR, textStatus, errorThrown);
+                        },
+                        beforeSend: function (jqXHR, settings) {
+                            formFinalSettings.beforeSend.call(_formProcessor, $form, jqXHR, settings)
+                        }
+                    });
+                }
 
                 return false;
             });

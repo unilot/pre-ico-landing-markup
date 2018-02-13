@@ -1,0 +1,16 @@
+.has-overlay
+    form.form.js-generic-form.js-form-no-focus.js-no-option-request(method="post", action="https://realweb.sendlane.com/form/20984",
+        data-success-message="Success")
+            include overlay
+            .row
+                .col-sm-4.col-xs-12
+                    .alert.js-form-alert.hidden.text-center
+            .row
+                .col-lg-6.col-lg-offset-2.col-md-6.col-md-offset-2.col-sm-5.col-sm-offset-2
+                    .form-group
+                        input#contactUsEmail(type="email", name="email", required=true)
+                        label(for="contactUsEmail") Enter Your Best Email #[span.required]
+                        span.bar
+                        .help-block.with-errors
+                .col-md-2.col-sm-3
+                    button.btn(role="submit") Get Me On The List
