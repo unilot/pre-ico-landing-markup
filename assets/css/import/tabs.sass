@@ -1,49 +1,62 @@
 $tab-height: 60px
 $wb-border-radius: 15px //white block border radius
+$tab-content-text-color: #333
+
+@mixin tab-heading
+  font-family: 'GothamProMedium'
+  font-size: 22.4px
+  line-height: $tab-height
+
 
 .token-details
+  height: 750px
+  @media (max-width: 1140px)
+    height: 800px
+  @media (max-width: 1039px)
+    height: 1150px
+  @media (max-width: 669px)
+    height: 1170px
+  @media (max-width: 659px)
+    height: 1230px
+  @media (max-width: 600px)
+    height: auto
+    padding-bottom: 40px
+
+
   .heading span
     &::after
       display: block
-      content: ''
+      position: absolute
+      top: 20px
+      right: 125px
       width: 190px
       height: 160px
       background-image: url('../img/coins.png') !important
       background-size: cover
-      position: absolute
-      top: 20px
-      right: 125px
+      content: ''
 
 .tab-wrapper
   margin-top: 100px
   z-index: 5
 
 .nav-tabs
-  display: block
-  box-sizing: border-box
+  display: flex
   height: $tab-height
-
-  @media (max-width: 617px)
-    li:not(.active):not(:hover)
-      a
-        width: 80px
-        white-space: nowrap
-        overflow: hidden
-        text-overflow: ellipsis
+  box-sizing: border-box
+  @media (max-width: 600px)
+    display: none
 
 
   li
-    float: left
     position: relative
 
     a
+      @include tab-heading
+      display: block
+      padding: 0 25px
       border-radius: $wb-border-radius $wb-border-radius 0 0
       color: #bcabff
-      font-family: 'GothamProMedium'
-      font-size: 22.4px
-      line-height: $tab-height
-      padding: 0 25px
-      display: block
+      white-space: nowrap
 
   .active
     a
@@ -67,34 +80,57 @@ $wb-border-radius: 15px //white block border radius
     z-index: -1
 
 .tab-content
-  background-color: $white
   display: block
   padding: 1em
-  margin-bottom: 85px
   border-radius: $wb-border-radius
+  background-color: $white
 
   .table
     margin: 0
 
     td
+      color: $tab-content-text-color
       font-size: 17px
-      color: #333
       vertical-align: top
 
       &:first-child
-        padding-left: 10px // align 1st cell with 1st tab
         width: 210px  // align 2nd cell with 2nd tab
+        padding-left: 10px // align 1st cell with 1st tab
 
     p
-      font-size: inherit
-      color: #333
-      padding: 0
-      line-height: 1em
       margin: 0 0 1em
+      padding: 0
+      color: $tab-content-text-color
+      font-size: inherit
+      line-height: 1.2em
 
 .tab-pane
   display: none
+  padding: 20px 0
+
+  @media (max-width: 600px)
+    display: block
+    padding: 10px 0
+
+    &::before
+      @include tab-heading
+      padding-left: 10px
+      color: $black
+
+    &:nth-child(1)::before
+      content: 'Presale details'
+
+    &:nth-child(2)::before
+      content: 'ICO Stage I'
+
+    &:nth-child(3)::before
+      content: 'ICO Stage II'
+
+    .table
+      td:first-child
+        max-width: 100px
+        padding-right: 10px
+
 
 .tab-pane.active
   display: block
-  padding: 20px 0 70px
