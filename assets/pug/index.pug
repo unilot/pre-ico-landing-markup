@@ -1,410 +1,433 @@
 extends include/layout.pug
 block content
-	section.sentence
-		.container
-			.scene
-				div(data-depth='0.6') 
-					img(src="img/sentence-bg.png", alt="")
-			.row
-				.col-md-6
-					h1 Initial Coin Offering Pre-sale Started
-				.col-md-6
-					p(style="margin-top:40px;") Unilot is a blockchain-powered lottery, gambling, betting and prognostication suite. In short, it is everything that a casino isn’t. It runs as a Distributed Autonomous Organization to guarantee a truly transparent lottery and gambling solution. Use Unilot's token like a casino chip to join and play, create and run your own private gambling rooms, and even put together global complex betting deals world-wide.
-			.row
-				.col-sm-8.col-xs-12
-					p Bonus Expires In:
-					.sentence__timer
-						.row
-							.col-xs-12
-								span.js-countdown
-							.col-xs-12.flex
-								b Days
-								b Hours
-								b Minutes
-								b Seсs
-							.col-xs-12.end-xs
-								p Goal 1 975 ETH (25 Million UNT)
-					.row
-						.col-xs-12
-							.sentence__scale
-								//- p ETH 0 Raised
-								.sentence__scale_block
-									span 0%
-						.col-sm-4.col-xs-12.center-xs
-							.sentence__block.sentence__block--padding
-								p Current bonus
-								span 40%
-						.col-sm-4.col-xs-12.center-xs
-							.sentence__block.sentence__block--padding
-								p min commitment
-								span 0.5 ETH
-						.col-sm-4.col-xs-12.center-xs
-							.sentence__block
-								p gas limit
-								span 40%
-						.col-xs-12.start-sm.center-xs
-							a(href="#").btn Contribute Now
-				.col-sm-4.end-xs
-					img(src="img/sentence.png", alt="")
-	
-	section.about.white#link1
-		.container
-			.row.heading
-				.col-xs-12
-					h2 What is Unilot
-					span Who we are
-			.row.content
-				.col-md-5.col-sm-7.col-xs-12
-					p <b>Unilot</b> is Decentralized Lottery Based on<br> <b>Ethereum Smart Contracts.</b><br>The maximum amount of raised funding is $12 000 000. This will help to speed up the expansion of the project, increase the amount of guaranteed prize fund and accelerate the launch of new drawings. <b>Unilot</b> is Decentralized Lottery Based on <b>Ethereum Smart Contracts.</b>
-					p The maximum amount of raised funding is $12 000 000. This will help to speed up the expansion of the project, increase the amount of guaranteed prize fund and accelerate the launch of new drawings.
-				.col-md-7.col-sm-5
-					img(src="img/about.png", alt="")
-	
-	section.advantages.light
-		.container
-			.row.heading
-				.col-xs-12
-					h2 Unilot Benefits
-					span Benefits
-			.row.content
-				.col-sm-6.col-xs-12
-					.advantages__block.advantages__block--margin
-						.row.middle-xs
-							.col-xs-3
-								img(src="img/01.svg", alt="")
-							.col-xs-9
-								p Unilot will not access or hold any Player Funds
-				.col-sm-6.col-xs-12
-					.advantages__block
-						.row.middle-xs
-							.col-xs-3
-								img(src="img/02.svg", alt="")
-							.col-xs-9
-								p Consensus of game state is reached between players with encrypted P2P messaging
-				.col-sm-6.col-xs-12
-					.advantages__block.advantages__block--margin
-						.row.middle-xs
-							.col-xs-3
-								img(src="img/03.svg", alt="")
-							.col-xs-9
-								p Play games globally or make money by hosting your own game tournaments
-				.col-sm-6.col-xs-12
-					.advantages__block
-						.row.middle-xs
-							.col-xs-3
-								img(src="img/04.svg", alt="")
-							.col-xs-9
-								p Feature Single player RNG & Multiplayer games
-				.col-sm-6.col-xs-12
-					.advantages__block.advantages__block--margin
-						.row.middle-xs
-							.col-xs-3
-								img(src="img/05.svg", alt="")
-							.col-xs-9
-								p Decentralized and isolated to prevent God Mode
-				.col-sm-6.col-xs-12
-					.advantages__block
-						.row.middle-xs
-							.col-xs-3
-								img(src="img/06.svg", alt="")
-							.col-xs-9
-								p Unilot platform can be Whitelabeled
-	
-	section.client.dark
-		.container
-			.scene1
-				div(data-depth='0.5') 
-					img(src="img/client-bg.png", alt="")
-			.row.heading
-				.col-xs-12
-					h2 Mobile Client
-					span Mobile App
-			.row.content
-				.col-sm-7.col-xs-12
-					p Unilot Mobile Client will be available on iOS and Android platforms. Unilot mobile will support multiple regions, languages offered English, Russian and German
-			.row.start-sm.center-xs
-				.col-md-5.col-sm-7.col-xs-12
-					.client__app
-						.row
-							.col-sm-6.col-xs-12
-								a(href="#")
-									.row
-										.col-xs-3
-											img(src="img/google-play.svg", alt="")
-										.col-xs-9
-											p Download on the
-											span Google Play
-							.col-sm-6.col-xs-12
-								a(href="#")
-									.row
-										.col-xs-3
-											img(src="img/apple.svg", alt="")
-										.col-xs-9
-											p Download on the
-											span App Store
-					.client__lng
-						a(href="#")
-							img(src="img/spain.svg", alt="")
-						a(href="")
-							img(src="img/china.svg", alt="")
-						a(href="")
-							img(src="img/russia.svg", alt="")
-						a(href="")
-							img(src="img/united-kingdom.svg", alt="")
-						a(href="")
-							img(src="img/germany.svg", alt="")
-					.row
-						.col-xs-12
-							a.btn(href='#') Contribute now
-				.col-md-7.col-sm-5
-					.client__img
-						img(src="img/client.png", alt="")
-	
-	section.roadmap.white
-		.container
-			.row.heading
-				.col-xs-12
-					h2 Roadmap
-					span Roadmap
-			include include/roadmap
+    section.sentence
+        .container
+            .scene
+                div(data-depth='0.6')
+                    img(src="img/sentence-bg.png", alt="")
+            .row
+                .col-md-6
+                    h1 Initial Coin Offering Pre-sale Started
+                .col-md-6
+                    p(style="margin-top:40px;") Unilot is a blockchain-powered lottery, gambling, betting and prognostication suite. In short, it is everything that a casino isn’t. It runs as a Distributed Autonomous Organization to guarantee a truly transparent lottery and gambling solution. Use Unilot's token like a casino chip to join and play, create and run your own private gambling rooms, and even put together global complex betting deals world-wide.
+            .row
+                .col-sm-8.col-xs-12
+                    p Bonus Expires In:
+                    .sentence__timer
+                        .row
+                            .col-xs-12
+                                .row
+                                    .col-md-4
+                                        .days-countdown
+                                            #jsDaysCountdown.days
+                                            .caption Days
+                                    .col-md-6
+                                        .time-countdown
+                                            script#jsTimeCounterTmpl(type="text/x-jsrender")
+                                                .row
+                                                    .col-xs-3.text-center
+                                                        .row
+                                                            .col-xs-12.hours %H
+                                                            .col-xs-12.caption Hours
+                                                    .col-xs-1.text-center.separator :
+                                                    .col-xs-3.text-center
+                                                        .row
+                                                            .col-xs-12.minutes %M
+                                                            .col-xs-12.caption Minutes
+                                                    .col-xs-1.text-center.separator :
+                                                    .col-xs-3.text-center
+                                                        .row
+                                                            .col-xs-12.seconds %S
+                                                            .col-xs-12.caption Seconds
+                            //.col-xs-12
+                            //	span.time-countdown
+                            //.col-xs-12.flex
+                            //	b Hours
+                            //	b Minutes
+                            //	b Seсs
+                            .col-xs-12.end-xs
+                                p Goal 1 975 ETH (25 Million UNT)
+                    .row
+                        .col-xs-12
+                            .sentence__scale
+                                //- p ETH 0 Raised
+                                .sentence__scale_block
+                                    span 0%
+                        .col-sm-4.col-xs-12.center-xs
+                            .sentence__block.sentence__block--padding
+                                p Current bonus
+                                span 40%
+                        .col-sm-4.col-xs-12.center-xs
+                            .sentence__block.sentence__block--padding
+                                p min commitment
+                                span 0.5 ETH
+                        .col-sm-4.col-xs-12.center-xs
+                            .sentence__block
+                                p gas limit
+                                span 40%
+                        .col-xs-12.start-sm.center-xs
+                            a(href="#").btn Contribute Now
+                .col-sm-4.end-xs
+                    img(src="img/sentence.png", alt="")
 
-	section.token-details.purple-bg
-		.container
-			.row.heading
-				.col-xs-12
-					h2 Token Details
-					span Token Details
-			include include/token-details
+    section.about.white#link1
+        .container
+            .row.heading
+                .col-xs-12
+                    h2 What is Unilot
+                    span Who we are
+            .row.content
+                .col-md-5.col-sm-7.col-xs-12
+                    p <b>Unilot</b> is Decentralized Lottery Based on<br> <b>Ethereum Smart Contracts.</b><br>The maximum amount of raised funding is $12 000 000. This will help to speed up the expansion of the project, increase the amount of guaranteed prize fund and accelerate the launch of new drawings. <b>Unilot</b> is Decentralized Lottery Based on <b>Ethereum Smart Contracts.</b>
+                    p The maximum amount of raised funding is $12 000 000. This will help to speed up the expansion of the project, increase the amount of guaranteed prize fund and accelerate the launch of new drawings.
+                .col-md-7.col-sm-5
+                    img(src="img/about.png", alt="")
 
-	section.function.light
-		.container
-			.row
-				.col-md-7.col-xs-12
-					.row.heading
-						.col-md-12
-							h2 Token Distribution
-					.row.content
-						.col-md-12
-							include include/token-distribution
-				.col-md-5.col-xs-12
-					.row.heading
-						.col-md-12
-							h2 Use of Funds
-							span Tokens Flow
-					.row.content
-						.col-md-12
-							include include/use-of-funds
-	
-	section.whitepaper.white#link2
-		.container
-			.scene2
-				div(data-depth='0.5') 
-					img(src="img/whitepaper-bg.png", alt="")
-			.row.heading
-				.col-xs-12
-					h2 Whitepaper
-					span Whitepaper
-			.row.content
-				.col-sm-5.col-xs-12
-					p Read our whitepaper in order to know more about the Unilot® platform, the token, the team and ICO round details.
-				.col-xs-12
-					a(href="#").btn View White Paper
-						i.icon-file-text2
-					span English	|	Русский	|	中文	|	Español	|	Français	|	Italiano	|	日本語
-	
-	section.roadshow.dark
-		.container
-			.row.heading
-				.col-xs-12
-					h2 Roadshow
-					span Roadshow 
-			.row.content
-				.col-xs-12
-					.swiper-container#swiper-2
-						.swiper-wrapper
-							.swiper-slide
-								h4 1-5
-								p November 2017
-								.swiper-slide__block
-									img(src="img/swiper-slide-1.png", alt="")
-									p Blockchain & Bitcoin Conference
-									.row
-										.col-xs-6
-											span Moscow
-										.col-xs-6.end-xs
-											a(href="#")
-												img(src="img/swiper-i.png", alt="")
-							.swiper-slide
-								h4 20-23
-								p November 2017
-								.swiper-slide__block
-									img(src="img/swiper-slide-2.png", alt="")
-									p GCC Blockchain Conference
-									.row
-										.col-xs-6
-											span Dubai
-										.col-xs-6.end-xs
-											a(href="#")
-												img(src="img/swiper-i.png", alt="")
-							.swiper-slide
-								h4 15-20
-								p December 2017
-								.swiper-slide__block
-									img(src="img/swiper-slide-3.png", alt="")
-									p Blockchain & Bitcoin Conference
-									.row
-										.col-xs-6
-											span London
-										.col-xs-6.end-xs
-											a(href="#")
-												img(src="img/swiper-i.png", alt="")
-							.swiper-slide
-								h4 1-5
-								p November 2017
-								.swiper-slide__block
-									img(src="img/swiper-slide-1.png", alt="")
-									p Blockchain & Bitcoin Conference
-									.row
-										.col-xs-6
-											span Moscow
-										.col-xs-6.end-xs
-											a(href="#")
-												img(src="img/swiper-i.png", alt="")
-							.swiper-slide
-								h4 20-23
-								p November 2017
-								.swiper-slide__block
-									img(src="img/swiper-slide-2.png", alt="")
-									p GCC Blockchain Conference
-									.row
-										.col-xs-6
-											span Dubai
-										.col-xs-6.end-xs
-											a(href="#")
-												img(src="img/swiper-i.png", alt="")
-							.swiper-slide
-								h4 15-20
-								p December 2017
-								.swiper-slide__block
-									img(src="img/swiper-slide-3.png", alt="")
-									p Blockchain & Bitcoin Conference
-									.row
-										.col-xs-6
-											span London
-										.col-xs-6.end-xs
-											a(href="#")
-												img(src="img/swiper-i.png", alt="")
-						.swiper-pagination
-					.swiper-button-prev#prev
-						i.icon-chevron-thin-left
-					.swiper-button-next#next
-						i.icon-chevron-thin-right
-	
-	section.advisors.white
-		.container
-			.row.heading
-				.col-xs-12
-					h2 Advisors
-					span Our Advisors
-			.row.content
-				include include/advisors
-	
-	section.team.light
-		.container
-			.row.heading
-				.col-xs-12
-					h2 Team
-					span Unilot Team
-			.row.content.center-xs
-				include include/team
+    section.advantages.light
+        .container
+            .row.heading
+                .col-xs-12
+                    h2 Unilot Benefits
+                    span Benefits
+            .row.content
+                .col-sm-6.col-xs-12
+                    .advantages__block.advantages__block--margin
+                        .row.middle-xs
+                            .col-xs-3
+                                img(src="img/01.svg", alt="")
+                            .col-xs-9
+                                p Unilot will not access or hold any Player Funds
+                .col-sm-6.col-xs-12
+                    .advantages__block
+                        .row.middle-xs
+                            .col-xs-3
+                                img(src="img/02.svg", alt="")
+                            .col-xs-9
+                                p Consensus of game state is reached between players with encrypted P2P messaging
+                .col-sm-6.col-xs-12
+                    .advantages__block.advantages__block--margin
+                        .row.middle-xs
+                            .col-xs-3
+                                img(src="img/03.svg", alt="")
+                            .col-xs-9
+                                p Play games globally or make money by hosting your own game tournaments
+                .col-sm-6.col-xs-12
+                    .advantages__block
+                        .row.middle-xs
+                            .col-xs-3
+                                img(src="img/04.svg", alt="")
+                            .col-xs-9
+                                p Feature Single player RNG & Multiplayer games
+                .col-sm-6.col-xs-12
+                    .advantages__block.advantages__block--margin
+                        .row.middle-xs
+                            .col-xs-3
+                                img(src="img/05.svg", alt="")
+                            .col-xs-9
+                                p Decentralized and isolated to prevent God Mode
+                .col-sm-6.col-xs-12
+                    .advantages__block
+                        .row.middle-xs
+                            .col-xs-3
+                                img(src="img/06.svg", alt="")
+                            .col-xs-9
+                                p Unilot platform can be Whitelabeled
 
-	section.faq.white#link3
-		.container
-			.row.heading
-				.col-xs-12
-					h2 FAQ's
-					span FAQ's
-			.row.content
-				.col-md-5.col-sm-7.col-xs-12
-					.faq__block.faq__block--one
-						a.faq-question.closed Is Unilot licensed online gambling site?
-							i.icon-chevron-thin-down
-						.name
-							p Sales are officially OPEN now, you can message me anytime if you have poblem or questions. It's Beta version of apps so please send me any comment that you have or saw. Let's get ready to rumble
-					.faq__block
-						a.faq-question What makes Unilot different from all other competitors?
-							i.icon-chevron-thin-down
-						p.name Sales are officially OPEN now, you can message me anytime if you have poblem or questions. It's Beta version of apps so please send me any comment that you have or saw. Let's get ready to rumble
-					.faq__block
-						a.faq-question Why the use of blockchain?
-							i.icon-chevron-thin-down
-						p.name Sales are officially OPEN now, you can message me anytime if you have poblem or questions. It's Beta version of apps so please send me any comment that you have or saw. Let's get ready to rumble
-					.faq__block
-						a.faq-question Will U.S. Citizens be able to participate?
-							i.icon-chevron-thin-down
-						p.name Sales are officially OPEN now, you can message me anytime if you have poblem or questions. It's Beta version of apps so please send me any comment that you have or saw. Let's get ready to rumble
-					.faq__block
-						a.faq-question How can I participate?
-							i.icon-chevron-thin-down
-						p.name Sales are officially OPEN now, you can message me anytime if you have poblem or questions. It's Beta version of apps so please send me any comment that you have or saw. Let's get ready to rumble
-					.faq__block
-						a.faq-question Is Unilot licensed online gambling site?
-							i.icon-chevron-thin-down
-				.col-md-5.col-sm-7.col-xs-12
-					.faq__block
-						a.faq-question I don't see tokens in my wallet? What is wrong?
-							i.icon-chevron-thin-down
-						p.name To transfer tokens to you wallet in METAMASK or at
-							a(href='#') myetherwallet.com
-							= ', click on “Add custom token” button at Token balance block.	Put contract address there, put UNIT at “Token symbol” field and 18 at “Decimals of Precision” field. Click on SAVE button. Your tokens will be automatically transfered to your wallet.'
-					a.btn(href="faq.html") Show all FAQ topics
+    section.client.dark
+        .container
+            .scene1
+                div(data-depth='0.5')
+                    img(src="img/client-bg.png", alt="")
+            .row.heading
+                .col-xs-12
+                    h2 Mobile Client
+                    span Mobile App
+            .row.content
+                .col-sm-7.col-xs-12
+                    p Unilot Mobile Client will be available on iOS and Android platforms. Unilot mobile will support multiple regions, languages offered English, Russian and German
+            .row.start-sm.center-xs
+                .col-md-5.col-sm-7.col-xs-12
+                    .client__app
+                        .row
+                            .col-sm-6.col-xs-12
+                                a(href="#")
+                                    .row
+                                        .col-xs-3
+                                            img(src="img/google-play.svg", alt="")
+                                        .col-xs-9
+                                            p Download on the
+                                            span Google Play
+                            .col-sm-6.col-xs-12
+                                a(href="#")
+                                    .row
+                                        .col-xs-3
+                                            img(src="img/apple.svg", alt="")
+                                        .col-xs-9
+                                            p Download on the
+                                            span App Store
+                    .client__lng
+                        a(href="#")
+                            img(src="img/spain.svg", alt="")
+                        a(href="")
+                            img(src="img/china.svg", alt="")
+                        a(href="")
+                            img(src="img/russia.svg", alt="")
+                        a(href="")
+                            img(src="img/united-kingdom.svg", alt="")
+                        a(href="")
+                            img(src="img/germany.svg", alt="")
+                    .row
+                        .col-xs-12
+                            a.btn(href='#') Contribute now
+                .col-md-7.col-sm-5
+                    .client__img
+                        img(src="img/client.png", alt="")
 
-	section.publications.light
-		.container
-			.row.heading
-				.col-xs-12
-						h2 Publications
-						span Publications
-			.row.content
-				.col-md-12.flex-wrap
-					.thumbnail
-						img(src="img/publications/ibm.png" alt="IBM")
-						.caption
-							h3 IBM
-							p The company works in a partnership agreement with a number of leading legal companies of Russia, Europe, the USA, and South Korea.
-							p
-								a.btn.btn-default(href="#" role="button") Read full
-					.thumbnail
-						img(src="img/publications/carlsberg.png" alt="Carlsberg")
-						.caption
-							h3 Carlsberg
-							p The company works in a partnership agreement with a number of leading legal companies of Russia, Europe, the USA, and South Korea.
-							p
-								a.btn.btn-default(href="#" role="button") Read full
-					.thumbnail
-						img(src="img/publications/cisco.png" alt="Cisco")
-						.caption
-							h3 Cisco
-							p The company works in a partnership agreement with a number of leading legal companies of Russia, Europe, the USA, and South Korea.
-							p
-								a.btn.btn-default(href="#" role="button") Read full
-					.thumbnail
-						img(src="img/publications/tele2.png" alt="Tele2")
-						.caption
-							h3 Tele2
-							p The company works in a partnership agreement with a number of leading legal companies of Russia, Europe, the USA, and South Korea.
-							p
-								a.btn.btn-default(href="#" role="button") Read full
+    section.roadmap.white
+        .container
+            .row.heading
+                .col-xs-12
+                    h2 Roadmap
+                    span Roadmap
+            include include/roadmap
 
-	section.partners.white
-		.container
-			.row.heading
-				.col-xs-12
-						h2 Partners
-						span Partners
-			.row.content
-				.col-md-12.flex-wrap
-					.thumbnail
-						img(src="img/partners/ico-board.png" alt="ICO Board")
-					.thumbnail
-						img(src="img/partners/tokenup.png" alt="TokenUp")
+    section.token-details.purple-bg
+        .container
+            .row.heading
+                .col-xs-12
+                    h2 Token Details
+                    span Token Details
+            include include/token-details
+
+    section.function.light
+        .container
+            .row
+                .col-md-7.col-xs-12
+                    .row.heading
+                        .col-md-12
+                            h2 Token Distribution
+                    .row.content
+                        .col-md-12
+                            include include/token-distribution
+                .col-md-5.col-xs-12
+                    .row.heading
+                        .col-md-12
+                            h2 Use of Funds
+                            span Tokens Flow
+                    .row.content
+                        .col-md-12
+                            include include/use-of-funds
+
+    section.whitepaper.white#link2
+        .container
+            .scene2
+                div(data-depth='0.5')
+                    img(src="img/whitepaper-bg.png", alt="")
+            .row.heading
+                .col-xs-12
+                    h2 Whitepaper
+                    span Whitepaper
+            .row.content
+                .col-sm-5.col-xs-12
+                    p Read our whitepaper in order to know more about the Unilot® platform, the token, the team and ICO round details.
+                .col-xs-12
+                    a(href="#").btn View White Paper
+                        i.icon-file-text2
+                    span English	|	Русский	|	中文	|	Español	|	Français	|	Italiano	|	日本語
+
+    section.roadshow.dark
+        .container
+            .row.heading
+                .col-xs-12
+                    h2 Roadshow
+                    span Roadshow
+            .row.content
+                .col-xs-12
+                    .swiper-container#swiper-2
+                        .swiper-wrapper
+                            .swiper-slide
+                                h4 1-5
+                                p November 2017
+                                .swiper-slide__block
+                                    img(src="img/swiper-slide-1.png", alt="")
+                                    p Blockchain & Bitcoin Conference
+                                    .row
+                                        .col-xs-6
+                                            span Moscow
+                                        .col-xs-6.end-xs
+                                            a(href="#")
+                                                img(src="img/swiper-i.png", alt="")
+                            .swiper-slide
+                                h4 20-23
+                                p November 2017
+                                .swiper-slide__block
+                                    img(src="img/swiper-slide-2.png", alt="")
+                                    p GCC Blockchain Conference
+                                    .row
+                                        .col-xs-6
+                                            span Dubai
+                                        .col-xs-6.end-xs
+                                            a(href="#")
+                                                img(src="img/swiper-i.png", alt="")
+                            .swiper-slide
+                                h4 15-20
+                                p December 2017
+                                .swiper-slide__block
+                                    img(src="img/swiper-slide-3.png", alt="")
+                                    p Blockchain & Bitcoin Conference
+                                    .row
+                                        .col-xs-6
+                                            span London
+                                        .col-xs-6.end-xs
+                                            a(href="#")
+                                                img(src="img/swiper-i.png", alt="")
+                            .swiper-slide
+                                h4 1-5
+                                p November 2017
+                                .swiper-slide__block
+                                    img(src="img/swiper-slide-1.png", alt="")
+                                    p Blockchain & Bitcoin Conference
+                                    .row
+                                        .col-xs-6
+                                            span Moscow
+                                        .col-xs-6.end-xs
+                                            a(href="#")
+                                                img(src="img/swiper-i.png", alt="")
+                            .swiper-slide
+                                h4 20-23
+                                p November 2017
+                                .swiper-slide__block
+                                    img(src="img/swiper-slide-2.png", alt="")
+                                    p GCC Blockchain Conference
+                                    .row
+                                        .col-xs-6
+                                            span Dubai
+                                        .col-xs-6.end-xs
+                                            a(href="#")
+                                                img(src="img/swiper-i.png", alt="")
+                            .swiper-slide
+                                h4 15-20
+                                p December 2017
+                                .swiper-slide__block
+                                    img(src="img/swiper-slide-3.png", alt="")
+                                    p Blockchain & Bitcoin Conference
+                                    .row
+                                        .col-xs-6
+                                            span London
+                                        .col-xs-6.end-xs
+                                            a(href="#")
+                                                img(src="img/swiper-i.png", alt="")
+                        .swiper-pagination
+                    .swiper-button-prev#prev
+                        i.icon-chevron-thin-left
+                    .swiper-button-next#next
+                        i.icon-chevron-thin-right
+
+    section.advisors.white
+        .container
+            .row.heading
+                .col-xs-12
+                    h2 Advisors
+                    span Our Advisors
+            .row.content
+                include include/advisors
+
+    section.team.light
+        .container
+            .row.heading
+                .col-xs-12
+                    h2 Team
+                    span Unilot Team
+            .row.content.center-xs
+                include include/team
+
+    section.faq.white#link3
+        .container
+            .row.heading
+                .col-xs-12
+                    h2 FAQ's
+                    span FAQ's
+            .row.content
+                .col-md-5.col-sm-7.col-xs-12
+                    .faq__block.faq__block--one
+                        a.faq-question.closed Is Unilot licensed online gambling site?
+                            i.icon-chevron-thin-down
+                        .name
+                            p Sales are officially OPEN now, you can message me anytime if you have poblem or questions. It's Beta version of apps so please send me any comment that you have or saw. Let's get ready to rumble
+                    .faq__block
+                        a.faq-question What makes Unilot different from all other competitors?
+                            i.icon-chevron-thin-down
+                        p.name Sales are officially OPEN now, you can message me anytime if you have poblem or questions. It's Beta version of apps so please send me any comment that you have or saw. Let's get ready to rumble
+                    .faq__block
+                        a.faq-question Why the use of blockchain?
+                            i.icon-chevron-thin-down
+                        p.name Sales are officially OPEN now, you can message me anytime if you have poblem or questions. It's Beta version of apps so please send me any comment that you have or saw. Let's get ready to rumble
+                    .faq__block
+                        a.faq-question Will U.S. Citizens be able to participate?
+                            i.icon-chevron-thin-down
+                        p.name Sales are officially OPEN now, you can message me anytime if you have poblem or questions. It's Beta version of apps so please send me any comment that you have or saw. Let's get ready to rumble
+                    .faq__block
+                        a.faq-question How can I participate?
+                            i.icon-chevron-thin-down
+                        p.name Sales are officially OPEN now, you can message me anytime if you have poblem or questions. It's Beta version of apps so please send me any comment that you have or saw. Let's get ready to rumble
+                    .faq__block
+                        a.faq-question Is Unilot licensed online gambling site?
+                            i.icon-chevron-thin-down
+                .col-md-5.col-sm-7.col-xs-12
+                    .faq__block
+                        a.faq-question I don't see tokens in my wallet? What is wrong?
+                            i.icon-chevron-thin-down
+                        p.name To transfer tokens to you wallet in METAMASK or at
+                            a(href='#') myetherwallet.com
+                            = ', click on “Add custom token” button at Token balance block.	Put contract address there, put UNIT at “Token symbol” field and 18 at “Decimals of Precision” field. Click on SAVE button. Your tokens will be automatically transfered to your wallet.'
+                    a.btn(href="faq.html") Show all FAQ topics
+
+    section.publications.light
+        .container
+            .row.heading
+                .col-xs-12
+                    h2 Publications
+                    span Publications
+            .row.content
+                .col-md-12.flex-wrap
+                    .thumbnail
+                        img(src="img/publications/ibm.png" alt="IBM")
+                        .caption
+                            h3 IBM
+                            p The company works in a partnership agreement with a number of leading legal companies of Russia, Europe, the USA, and South Korea.
+                            p
+                                a.btn.btn-default(href="#" role="button") Read full
+                    .thumbnail
+                        img(src="img/publications/carlsberg.png" alt="Carlsberg")
+                        .caption
+                            h3 Carlsberg
+                            p The company works in a partnership agreement with a number of leading legal companies of Russia, Europe, the USA, and South Korea.
+                            p
+                                a.btn.btn-default(href="#" role="button") Read full
+                    .thumbnail
+                        img(src="img/publications/cisco.png" alt="Cisco")
+                        .caption
+                            h3 Cisco
+                            p The company works in a partnership agreement with a number of leading legal companies of Russia, Europe, the USA, and South Korea.
+                            p
+                                a.btn.btn-default(href="#" role="button") Read full
+                    .thumbnail
+                        img(src="img/publications/tele2.png" alt="Tele2")
+                        .caption
+                            h3 Tele2
+                            p The company works in a partnership agreement with a number of leading legal companies of Russia, Europe, the USA, and South Korea.
+                            p
+                                a.btn.btn-default(href="#" role="button") Read full
+
+    section.partners.white
+        .container
+            .row.heading
+                .col-xs-12
+                    h2 Partners
+                    span Partners
+            .row.content
+                .col-md-12.flex-wrap
+                    .thumbnail
+                        img(src="img/partners/ico-board.png" alt="ICO Board")
+                    .thumbnail
+                        img(src="img/partners/tokenup.png" alt="TokenUp")
