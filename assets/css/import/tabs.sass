@@ -21,6 +21,19 @@ $tab-content-text-color: #333
   @media (max-width: 600px)
     height: auto
     padding-bottom: 40px
+  &.ru-ru
+    height: 850px
+    @media (max-width: 1140px)
+      height: 900px
+    @media (max-width: 1039px)
+      height: 1250px
+    @media (max-width: 669px)
+      height: 1270px
+    @media (max-width: 659px)
+      height: 1330px
+    @media (max-width: 600px)
+      height: auto
+      padding-bottom: 40px
 
 
   .heading span
@@ -112,24 +125,18 @@ $tab-content-text-color: #333
     display: block
     padding: 10px 0
 
-    &::before
-      @include tab-heading
-      padding-left: 10px
-      color: $black
-
-    &:nth-child(1)::before
-      content: 'Presale details'
-
-    &:nth-child(2)::before
-      content: 'ICO Stage I'
-
-    &:nth-child(3)::before
-      content: 'ICO Stage II'
-
     .table
       td:first-child
         max-width: 100px
         padding-right: 10px
+
+  &.ico-stage-details > h3
+    display: none
+    @media (max-width: 600px)
+      @include tab-heading
+      padding-left: 10px
+      color: $black
+      display: block
 
 
 .tab-pane.active

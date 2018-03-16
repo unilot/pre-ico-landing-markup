@@ -110,16 +110,25 @@
         });
     });
 
-// select
-    $('.js-submit-on-change').change(function (event) {
-        var $target = $(this);
-        $target.closest('form').submit();
+    $('.js-submit').on('click', function(event){
+        $(this).closest('form').submit();
+
+        return false;
     });
 
-    var milestone = moment.tz('2018-02-17 19:00', 'UTC');
+    var milestone = moment.tz('2018-03-22 19:00', 'UTC');
+    var timeCounterTmpl = $.templates('#jsTimeCounterTmpl');
 
-    $('.js-countdown').countdown(milestone.toDate(), function (event) {
-        $(this).text(event.strftime('%D : %H : %M : %S'))
+    if ( $('#jsDaysCountdown').length > 0 ) {
+        var flipper = new flipCounter('jsDaysCountdown', {value: '30', auto: false});
+    }
+
+    $('.time-countdown').countdown(milestone.toDate(), function (event) {
+        if ( typeof flipper !== 'undefined' && parseInt(flipper.getValue()) !== event.offset.totalDays ) {
+            flipper.setValue(event.offset.totalDays);
+        }
+
+        $(this).html(event.strftime(timeCounterTmpl.render()));
     });
 
 // Сварачивающиеся блоки
@@ -136,11 +145,21 @@
 
 
     var scene = $('.scene').get(0);
-    var parallaxInstance = new Parallax(scene);
+    if (scene) {
+        var parallaxInstance = new Parallax(scene);
+    }
+
     var scene = $('.scene1').get(0);
-    var parallaxInstance = new Parallax(scene);
+
+    if (scene) {
+        var parallaxInstance = new Parallax(scene);
+    }
+
     var scene = $('.scene2').get(0);
-    var parallaxInstance = new Parallax(scene);
+
+    if ( scene ) {
+        var parallaxInstance = new Parallax(scene);
+    }
 
     var detectInUse = function() {
        var $input = $(this);
